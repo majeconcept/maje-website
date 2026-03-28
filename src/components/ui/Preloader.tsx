@@ -96,7 +96,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
         }}
       >
         <Image
-          src="/LOGO VECTO SOURCE.svg"
+          src="/logo.svg"
           alt="Maje Concept"
           width={160}
           height={48}

@@ -86,7 +86,7 @@ export function Navigation() {
         onMouseLeave={() => setVariant("default")}
       >
         <Image
-          src="/LOGO VECTO SOURCE.svg"
+          src="/logo.svg"
           alt="Maje Concept"
           width={120}
           height={36}
