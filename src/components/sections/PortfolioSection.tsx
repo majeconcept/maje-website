@@ -15,6 +15,7 @@ export function PortfolioSection() {
   const gridRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const isAnimating = useRef(false)
+  const isDesktopRef = useRef(false)
   const [activeFilter, setActiveFilter] = useState<PortfolioFilter>("Tous")
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const { isReady } = useAnimation()
@@ -24,28 +25,49 @@ export function PortfolioSection() {
   useGSAP(() => {
     if (!isReady) return
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 80%",
-        once: true,
+    const mm = gsap.matchMedia()
+
+    mm.add(
+      {
+        isDesktop: "(min-width: 769px)",
+        reduceMotion: "(prefers-reduced-motion: reduce)",
       },
-    })
+      (context) => {
+        const { isDesktop, reduceMotion } = context.conditions!
+        isDesktopRef.current = !!(isDesktop && !reduceMotion)
 
-    tl.from(headerRef.current, {
-      y: 60,
-      opacity: 0,
-      duration: 0.9,
-      ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-    })
+        if (isDesktop && !reduceMotion) {
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 80%",
+              once: true,
+            },
+          })
 
-    tl.from(".portfolio-card", {
-      y: 60,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.06,
-      ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-    }, "-=0.5")
+          tl.from(headerRef.current, {
+            y: 60,
+            opacity: 0,
+            duration: 0.9,
+            ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+          })
+
+          tl.from(".portfolio-card", {
+            y: 60,
+            opacity: 0,
+            duration: 0.9,
+            stagger: 0.06,
+            ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+          }, "-=0.5")
+        } else {
+          // Instant reveal — no animation on mobile or reduced-motion
+          gsap.set(headerRef.current, { opacity: 1, y: 0 })
+          gsap.set(".portfolio-card", { opacity: 1, y: 0 })
+        }
+
+        return () => mm.revert()
+      }
+    )
   }, { scope: sectionRef, dependencies: [isReady] })
 
   // ── GSAP FLIP FILTER ───────────────────────────────────────────────
@@ -56,30 +78,36 @@ export function PortfolioSection() {
     const grid = gridRef.current
     if (!grid) return
 
-    // Capture positions BEFORE DOM change
-    const state = Flip.getState(grid.querySelectorAll("[data-flip-id]"))
+    if (isDesktopRef.current) {
+      // Capture positions BEFORE DOM change
+      const state = Flip.getState(grid.querySelectorAll("[data-flip-id]"))
 
-    // React state mutation → DOM update
-    setActiveFilter(filter)
+      // React state mutation → DOM update
+      setActiveFilter(filter)
 
-    // After React commits, animate from captured to new positions
-    requestAnimationFrame(() => {
-      Flip.from(state, {
-        duration: 0.65,
-        ease: "power2.inOut",
-        stagger: 0.04,
-        absolute: true,
-        onComplete: () => { isAnimating.current = false },
-        onEnter: (elements) =>
-          gsap.fromTo(
-            elements,
-            { opacity: 0, scale: 0.9 },
-            { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }
-          ),
-        onLeave: (elements) =>
-          gsap.to(elements, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.in" }),
+      // After React commits, animate from captured to new positions
+      requestAnimationFrame(() => {
+        Flip.from(state, {
+          duration: 0.65,
+          ease: "power2.inOut",
+          stagger: 0.04,
+          absolute: true,
+          onComplete: () => { isAnimating.current = false },
+          onEnter: (elements) =>
+            gsap.fromTo(
+              elements,
+              { opacity: 0, scale: 0.9 },
+              { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }
+            ),
+          onLeave: (elements) =>
+            gsap.to(elements, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.in" }),
+        })
       })
-    })
+    } else {
+      // Mobile: instant filter switch, no Flip animation
+      setActiveFilter(filter)
+      isAnimating.current = false
+    }
   }
 
   // Open lightbox at index within ALL projects (not filtered)
@@ -95,7 +123,7 @@ export function PortfolioSection() {
         id="realisations"
         className="py-24 lg:py-32 bg-brand-black"
       >
-        <div className="max-w-7xl mx-auto px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* ── Header ── */}
           <div ref={headerRef} className="mb-16">
@@ -103,7 +131,7 @@ export function PortfolioSection() {
               Nos réalisations
             </p>
             <h2
-              className="font-display text-[clamp(2.5rem,6vw,5rem)] text-brand-cream leading-[0.95] mb-8"
+              className="font-display text-[clamp(2rem,6vw,5rem)] text-brand-cream leading-[0.95] mb-8"
               style={{ letterSpacing: "-0.02em" }}
             >
               Du tissu à<br />la réalité.

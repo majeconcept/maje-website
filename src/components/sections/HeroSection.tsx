@@ -23,102 +23,123 @@ export function HeroSection() {
     if (!isReady) return
     if (!titleRef.current || !sectionRef.current) return
 
-    // ── ENTRANCE TIMELINE ──────────────────────────────────────────────
-    const tl = gsap.timeline()
+    const mm = gsap.matchMedia()
 
-    // Badge fade in
-    tl.from(badgeRef.current, {
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-    })
-
-    // Eyebrow line
-    tl.from(eyebrowRef.current, {
-      opacity: 0,
-      y: 30,
-      duration: 0.7,
-      ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-    }, "-=0.3")
-
-    // SplitText title — new API, mask:"lines" for clean clip reveal
-    SplitText.create(titleRef.current, {
-      type: "lines",
-      mask: "lines",
-      autoSplit: true,
-      onSplit(self) {
-        tl.from(self.lines, {
-          yPercent: 100,
-          opacity: 0,
-          duration: 1.1,
-          stagger: 0.1,
-          ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-          onComplete: () => self.revert(),
-        }, "-=0.5")
+    mm.add(
+      {
+        isDesktop: "(min-width: 769px)",
+        reduceMotion: "(prefers-reduced-motion: reduce)",
       },
-    })
+      (context) => {
+        const { isDesktop, reduceMotion } = context.conditions!
 
-    // Subtitle + CTAs stagger
-    tl.from([subtitleRef.current, ctasRef.current], {
-      opacity: 0,
-      y: 40,
-      duration: 0.9,
-      stagger: 0.08,
-      ease: "cubic-bezier(0.22, 1, 0.36, 1)",
-    }, "-=0.6")
+        if (isDesktop && !reduceMotion) {
+          // ── ENTRANCE TIMELINE ────────────────────────────────────────────
+          const tl = gsap.timeline()
 
-    // ── SCROLL PARALLAX ────────────────────────────────────────────────
-    // Uses `y` property — ScrollTrigger scrubs position as user scrolls
-    const layers = gsap.utils.toArray<HTMLElement>("[data-depth]", sectionRef.current)
+          // Badge fade in
+          tl.from(badgeRef.current, {
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+          })
 
-    layers.forEach((layer) => {
-      const depth = parseFloat(layer.dataset.depth || "0.2")
-      gsap.to(layer, {
-        y: () => -(window.innerHeight * depth * 0.5),
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      })
-    })
+          // Eyebrow line
+          tl.from(eyebrowRef.current, {
+            opacity: 0,
+            y: 30,
+            duration: 0.7,
+            ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+          }, "-=0.3")
 
-    // ── MOUSEMOVE PARALLAX ─────────────────────────────────────────────
-    // Uses `xPercent`/`yPercent` to avoid conflicting with scroll `y` above
-    const mouseSetters = layers.map((layer) => {
-      const depth = parseFloat(layer.dataset.depth || "0.2")
-      return {
-        x: gsap.quickTo(layer, "xPercent", { duration: 0.8, ease: "power3.out" }),
-        y: gsap.quickTo(layer, "yPercent", { duration: 0.8, ease: "power3.out" }),
-        depth,
+          // SplitText title — new API, mask:"lines" for clean clip reveal
+          SplitText.create(titleRef.current, {
+            type: "lines",
+            mask: "lines",
+            autoSplit: true,
+            onSplit(self) {
+              tl.from(self.lines, {
+                yPercent: 100,
+                opacity: 0,
+                duration: 1.1,
+                stagger: 0.1,
+                ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+                onComplete: () => self.revert(),
+              }, "-=0.5")
+            },
+          })
+
+          // Subtitle + CTAs stagger
+          tl.from([subtitleRef.current, ctasRef.current], {
+            opacity: 0,
+            y: 40,
+            duration: 0.9,
+            stagger: 0.08,
+            ease: "cubic-bezier(0.22, 1, 0.36, 1)",
+          }, "-=0.6")
+
+          // ── SCROLL PARALLAX ──────────────────────────────────────────────
+          // Uses `y` property — ScrollTrigger scrubs position as user scrolls
+          const layers = gsap.utils.toArray<HTMLElement>("[data-depth]", sectionRef.current)
+
+          layers.forEach((layer) => {
+            const depth = parseFloat(layer.dataset.depth || "0.2")
+            gsap.to(layer, {
+              y: () => -(window.innerHeight * depth * 0.5),
+              ease: "none",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                invalidateOnRefresh: true,
+              },
+            })
+          })
+
+          // ── MOUSEMOVE PARALLAX ───────────────────────────────────────────
+          // Uses `xPercent`/`yPercent` to avoid conflicting with scroll `y` above
+          const mouseSetters = layers.map((layer) => {
+            const depth = parseFloat(layer.dataset.depth || "0.2")
+            return {
+              x: gsap.quickTo(layer, "xPercent", { duration: 0.8, ease: "power3.out" }),
+              y: gsap.quickTo(layer, "yPercent", { duration: 0.8, ease: "power3.out" }),
+              depth,
+            }
+          })
+
+          const onMouseMove = (e: MouseEvent) => {
+            const cx = window.innerWidth / 2
+            const cy = window.innerHeight / 2
+            const dx = (e.clientX - cx) / cx
+            const dy = (e.clientY - cy) / cy
+            mouseSetters.forEach(({ x, y, depth }) => {
+              x(dx * 4 * depth)
+              y(dy * 2 * depth)
+            })
+          }
+
+          const section = sectionRef.current
+          section?.addEventListener("mousemove", onMouseMove, { passive: true })
+
+          return () => {
+            section?.removeEventListener("mousemove", onMouseMove)
+            ScrollTrigger.getAll().forEach((st) => {
+              if (st.trigger === sectionRef.current) st.kill()
+            })
+          }
+        } else {
+          // Simplified: instant reveal — no animation on mobile or reduced-motion
+          gsap.set(
+            [badgeRef.current, eyebrowRef.current, titleRef.current, subtitleRef.current, ctasRef.current],
+            { opacity: 1, y: 0 }
+          )
+        }
+
+        return () => mm.revert()
       }
-    })
-
-    const onMouseMove = (e: MouseEvent) => {
-      const cx = window.innerWidth / 2
-      const cy = window.innerHeight / 2
-      const dx = (e.clientX - cx) / cx
-      const dy = (e.clientY - cy) / cy
-      mouseSetters.forEach(({ x, y, depth }) => {
-        x(dx * 4 * depth)
-        y(dy * 2 * depth)
-      })
-    }
-
-    const section = sectionRef.current
-    section?.addEventListener("mousemove", onMouseMove, { passive: true })
-
-    return () => {
-      section?.removeEventListener("mousemove", onMouseMove)
-      // Kill scroll triggers attached to this scope
-      ScrollTrigger.getAll().forEach((st) => {
-        if (st.trigger === sectionRef.current) st.kill()
-      })
-    }
+    )
   }, { scope: sectionRef, dependencies: [isReady] })
 
   return (
@@ -171,7 +192,7 @@ export function HeroSection() {
       {/* ── PARALLAX LAYER 0.5 — main content (foreground) ── */}
       <div
         data-depth="0.5"
-        className="relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-16 pt-32 pb-24"
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 pt-32 pb-24"
       >
         {/* Badge */}
         <div ref={badgeRef}>
@@ -191,7 +212,7 @@ export function HeroSection() {
         {/* Title — SplitText target */}
         <h1
           ref={titleRef}
-          className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.95] text-brand-cream mb-10 max-w-4xl"
+          className="font-display text-[clamp(2.5rem,9vw,8rem)] leading-[0.95] text-brand-cream mb-10 max-w-4xl"
           style={{ letterSpacing: "-0.02em" }}
         >
           {HERO_CONTENT.titleLines.join(" ")}
@@ -200,7 +221,7 @@ export function HeroSection() {
         {/* Subtitle */}
         <p
           ref={subtitleRef}
-          className="font-body text-brand-muted text-lg leading-relaxed max-w-xl mb-12"
+          className="font-body text-brand-muted text-base lg:text-lg leading-relaxed max-w-xl mb-12"
         >
           {HERO_CONTENT.subtitle}
         </p>
@@ -233,7 +254,7 @@ export function HeroSection() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-8 lg:left-16 flex items-center gap-3 text-brand-muted/50">
+        <div className="absolute bottom-12 left-4 sm:left-8 lg:left-16 flex items-center gap-3 text-brand-muted/50">
           <div className="w-px h-12 bg-brand-muted/30 relative overflow-hidden">
             <div
               className="absolute top-0 left-0 w-full bg-brand-gold/60"
