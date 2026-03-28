@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-conversion-03-02-PLAN.md
-last_updated: "2026-03-28T19:57:59.501Z"
+stopped_at: Completed 03-conversion-03-03-PLAN.md
+last_updated: "2026-03-28T20:02:15.687Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
   percent: 14
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 3 of 4 (Interactivité & Conversion)
-Plan: 2 of 3 in current phase (planning complete, ready to execute)
+Plan: 3 of 3 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -83,6 +83,7 @@ Progress: [████░░░░░░] 14% (7/10 plans across phases 1-3 pla
 | Phase 02 P04 | 8 | 2 tasks | 5 files |
 | Phase 03-conversion P01 | 18 | 2 tasks | 4 files |
 | Phase 03-conversion P02 | 12 | 2 tasks | 7 files |
+| Phase 03-conversion P03 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -130,6 +131,7 @@ Recent decisions affecting current work:
 - [Phase 03-conversion]: Inline SVG 4-layer composition for garment preview — no canvas, no Three.js, React state drives fill prop directly
 - [Phase 03-conversion]: useAnimation imported from @/components/providers/AnimationProvider — consistent with all other section components
 - [Phase 03-conversion]: ConfirmationEmail failure is non-blocking — notification email is primary, server returns 200 regardless
+- [Phase 03-conversion]: Newsletter form client-side only in v1 — success state without backend (Phase 4/v2 will connect Mailchimp/Brevo) — Frontend-only newsletter is intentional — Phase 3 Context spec defers backend to Phase 4
 
 ### Pending Todos
 
@@ -141,8 +143,8 @@ RESEND_API_KEY needed for email sending to work at runtime. Build succeeds witho
 
 ## Session Continuity
 
-Last session: 2026-03-28T19:57:59.496Z
-Stopped at: Completed 03-conversion-03-02-PLAN.md
+Last session: 2026-03-28T20:02:01.536Z
+Stopped at: Completed 03-conversion-03-03-PLAN.md
 Resume file: None
 
 ## Next Steps

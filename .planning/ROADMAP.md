@@ -64,7 +64,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 - [x] 03-01-PLAN.md — ConfiguratorContext + configurator.ts data layer + ConfiguratorSection SVG 4 calques
 - [x] 03-02-PLAN.md — ContactSection (react-hook-form + Zod + Resend) + validations.ts + Route Handler + email templates
-- [ ] 03-03-PLAN.md — Footer 4 colonnes + newsletter + câblage final page.tsx
+- [x] 03-03-PLAN.md — Footer 4 colonnes + newsletter + câblage final page.tsx
 **UI hint**: yes
 
 ### Phase 4: SEO & Performance

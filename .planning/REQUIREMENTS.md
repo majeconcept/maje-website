@@ -72,8 +72,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Footer
 
-- [ ] **FOOT-01**: Le footer affiche la navigation complète, réseaux sociaux, mentions légales, coordonnées et localisation
-- [ ] **FOOT-02**: Un formulaire newsletter permet la collecte d'emails
+- [x] **FOOT-01**: Le footer affiche la navigation complète, réseaux sociaux, mentions légales, coordonnées et localisation
+- [x] **FOOT-02**: Un formulaire newsletter permet la collecte d'emails
 
 ### SEO Technique
 
@@ -164,8 +164,8 @@ Deferred to future release.
 | CONT-03 | Phase 3 | Complete |
 | CONT-04 | Phase 3 | Complete |
 | CONT-05 | Phase 3 | Complete |
-| FOOT-01 | Phase 3 | Pending |
-| FOOT-02 | Phase 3 | Pending |
+| FOOT-01 | Phase 3 | Complete |
+| FOOT-02 | Phase 3 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
