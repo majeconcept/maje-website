@@ -13,7 +13,7 @@ Quatre phases construisent le site de l'intérieur vers l'extérieur : d'abord l
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Fondations & Design System** - Scaffold Next.js, design system, curseur custom, navigation et preloader
-- [ ] **Phase 2: Sections Principales** - Hero, Portfolio, Expertises et Preuves sociales avec animations GSAP complètes
+- [x] **Phase 2: Sections Principales** - Hero, Portfolio, Expertises et Preuves sociales avec animations GSAP complètes (completed 2026-03-28)
 - [ ] **Phase 3: Interactivité & Conversion** - Configurateur produit, formulaire de contact, footer et mentions légales
 - [ ] **Phase 4: SEO & Performance** - Metadata, JSON-LD, sitemap, Core Web Vitals, responsive polish
 
@@ -49,7 +49,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] 02-01-PLAN.md — Section Hero : SplitText ligne par ligne + parallax scroll+souris (3 couches) + 2 CTAs MagneticButton
 - [x] 02-02-PLAN.md — Section Portfolio : grille masonry 8 projets + filtres GSAP Flip + hover overlay + lightbox AnimatePresence
 - [x] 02-03-PLAN.md — Section Expertises : AnimatedCounter KPI (proxy GSAP) + 5 domaines icônes SVG + ScrollTrigger entrance
-- [ ] 02-04-PLAN.md — Section Social Proof : carrousel logos CSS marquee + 3 témoignages bento + câblage final page.tsx
+- [x] 02-04-PLAN.md — Section Social Proof : carrousel logos CSS marquee + 3 témoignages bento + câblage final page.tsx
 **UI hint**: yes
 
 ### Phase 3: Interactivité & Conversion
@@ -83,7 +83,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
-| 2. Sections Principales | 2/4 | In Progress|  |
+| 2. Sections Principales | 4/4 | Complete   | 2026-03-28 |
 | 3. Interactivité & Conversion | 0/? | Not started | - |
 | 4. SEO & Performance | 0/? | Not started | - |
 

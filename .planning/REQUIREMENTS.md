@@ -51,9 +51,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Preuves Sociales
 
-- [ ] **SOCL-01**: Un carrousel infinite scroll horizontal affiche minimum 8 logos clients fictifs mais réalistes
-- [ ] **SOCL-02**: Des témoignages avec photo, nom, poste et entreprise sont présentés dans un carrousel premium ou layout bento
-- [ ] **SOCL-03**: Des statistiques clés (satisfaction, projets livrés) sont animées avec comptage au scroll
+- [x] **SOCL-01**: Un carrousel infinite scroll horizontal affiche minimum 8 logos clients fictifs mais réalistes
+- [x] **SOCL-02**: Des témoignages avec photo, nom, poste et entreprise sont présentés dans un carrousel premium ou layout bento
+- [x] **SOCL-03**: Des statistiques clés (satisfaction, projets livrés) sont animées avec comptage au scroll
 
 ### Configurateur Produit
 
@@ -152,9 +152,9 @@ Deferred to future release.
 | EXPT-01 | Phase 2 | Complete |
 | EXPT-02 | Phase 2 | Complete |
 | EXPT-03 | Phase 2 | Complete |
-| SOCL-01 | Phase 2 | Pending |
-| SOCL-02 | Phase 2 | Pending |
-| SOCL-03 | Phase 2 | Pending |
+| SOCL-01 | Phase 2 | Complete |
+| SOCL-02 | Phase 2 | Complete |
+| SOCL-03 | Phase 2 | Complete |
 | CONF-01 | Phase 3 | Pending |
 | CONF-02 | Phase 3 | Pending |
 | CONF-03 | Phase 3 | Pending |

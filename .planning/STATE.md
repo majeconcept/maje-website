@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-03-PLAN.md (ExpertiseSection)
-last_updated: "2026-03-28T19:25:51.392Z"
+stopped_at: Completed 02-04-PLAN.md
+last_updated: "2026-03-28T19:29:37.357Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 11
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 2 of 4 (Sections Principales)
-Plan: 3 of 4 in current phase (planning complete, ready to execute)
+Plan: 4 of 4 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -72,6 +72,7 @@ Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 plan
 | Phase 02-sections P01 | 10 | 2 tasks | 4 files |
 | Phase 02-sections P02 | 2 | 2 tasks | 4 files |
 | Phase 02-sections P03 | 5 | 2 tasks | 8 files |
+| Phase 02 P04 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -106,6 +107,7 @@ Recent decisions affecting current work:
 - [Phase 02-sections]: Masonry via CSS Grid colSpan/rowSpan Tailwind classes in data layer — avoids JS layout calculation and animates cleanly with GSAP Flip
 - [Phase 02-sections]: IconDTF reused for transfert domain — both are thermal/digital transfer techniques
 - [Phase 02-sections]: fr-FR Intl.NumberFormat for KPI >= 1000 — 2000 shows as 2 000 with French thousands separator
+- [Phase 02]: CSS marquee chosen over GSAP ticker for logo carousel — lighter, animationPlayState provides native pause control
 
 ### Pending Todos
 
@@ -117,8 +119,8 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28T19:25:51.389Z
-Stopped at: Completed 02-03-PLAN.md (ExpertiseSection)
+Last session: 2026-03-28T19:29:37.354Z
+Stopped at: Completed 02-04-PLAN.md
 Resume file: None
 
 ## Next Steps
