@@ -3,6 +3,7 @@ import { PortfolioSection } from "@/components/sections/PortfolioSection"
 import { ExpertiseSection } from "@/components/sections/ExpertiseSection"
 import { SocialProofSection } from "@/components/sections/SocialProofSection"
 import { ConfiguratorSection } from "@/components/sections/ConfiguratorSection"
+import { ContactSection } from "@/components/sections/ContactSection"
 import { ConfiguratorProvider } from "@/lib/configuratorContext"
 
 export default function Home() {
@@ -24,8 +25,8 @@ export default function Home() {
         {/* Phase 3 — Plan 01: Configurateur produit SVG */}
         <ConfiguratorSection />
 
-        {/* Phase 3 placeholder — navigation ID must be present */}
-        <div id="contact" className="min-h-screen bg-brand-black" />
+        {/* Phase 3 — Plan 02: Formulaire de contact + Resend */}
+        <ContactSection />
       </main>
     </ConfiguratorProvider>
   )
