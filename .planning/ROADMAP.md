@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 1: Fondations & Design System** - Scaffold Next.js, design system, curseur custom, navigation et preloader
 - [x] **Phase 2: Sections Principales** - Hero, Portfolio, Expertises et Preuves sociales avec animations GSAP complètes (completed 2026-03-28)
 - [ ] **Phase 3: Interactivité & Conversion** - Configurateur produit, formulaire de contact, footer et mentions légales
-- [ ] **Phase 4: SEO & Performance** - Metadata, JSON-LD, sitemap, Core Web Vitals, responsive polish
+- [x] **Phase 4: SEO & Performance** - Metadata, JSON-LD, sitemap, Core Web Vitals, responsive polish (completed 2026-03-28)
 
 ## Phase Details
 
@@ -78,7 +78,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Le site est entièrement fonctionnel et visuellement correct sur mobile (320px+), tablette et desktop, avec animations simplifiées sur mobile
 **Plans**: 2 plans
 - [x] 04-01-PLAN.md — layout.tsx metadata complètes + JSON-LD LocalBusiness + adjustFontFallback + sitemap.ts + robots.ts
-- [ ] 04-02-PLAN.md — globals.css cursor touch guard + dynamic imports sections lourdes + gsap.matchMedia() + build final
+- [x] 04-02-PLAN.md — globals.css cursor touch guard + dynamic imports sections lourdes + gsap.matchMedia() + build final
 
 ## Progress
 
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
 | 2. Sections Principales | 4/4 | Complete   | 2026-03-28 |
 | 3. Interactivité & Conversion | 3/3 | Complete | 2026-03-28 |
-| 4. SEO & Performance | 1/2 | In Progress|  |
+| 4. SEO & Performance | 2/2 | Complete   | 2026-03-28 |
 
 ---
 *Roadmap created: 2026-03-28*

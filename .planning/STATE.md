@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-seo-01-PLAN.md
-last_updated: "2026-03-28T20:17:28.932Z"
+stopped_at: Completed 04-seo-02-PLAN.md
+last_updated: "2026-03-28T20:22:28.394Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 12
-  completed_plans: 11
+  completed_plans: 12
   percent: 83
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 4 of 4 (SEO & Performance)
-Plan: 1 of 2 in current phase (planning complete, ready to execute)
+Plan: 2 of 2 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -92,6 +92,7 @@ Progress: [████████░░] 83% (10/12 plans across phases 1-4)
 | Phase 03-conversion P02 | 12 | 2 tasks | 7 files |
 | Phase 03-conversion P03 | 2min | 2 tasks | 2 files |
 | Phase 04-seo P01 | 8 | 2 tasks | 3 files |
+| Phase 04-seo P02 | 12 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -148,6 +149,8 @@ Recent decisions affecting current work:
 - [Phase 04 Planning]: HeroSection, ContactSection, Footer stay eager (not dynamic()) — above-fold or small
 - [Phase 04-seo]: JSON-LD via native script tag (not next/script) — structured data must be inline in SSR HTML
 - [Phase 04-seo]: adjustFontFallback: Arial on sohneBreit to eliminate FOUT-driven CLS
+- [Phase 04-seo]: isDesktopRef bridge pattern for matchMedia state in event handlers outside useGSAP scope
+- [Phase 04-seo]: next/dynamic(ssr:true) for 4 heavy sections — HTML SSR preserved for SEO, JS bundle deferred
 
 ### Pending Todos
 
@@ -159,8 +162,8 @@ RESEND_API_KEY needed for email sending to work at runtime. Build succeeds witho
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:17:28.927Z
-Stopped at: Completed 04-seo-01-PLAN.md
+Last session: 2026-03-28T20:22:28.390Z
+Stopped at: Completed 04-seo-02-PLAN.md
 Resume file: None
 
 ## Next Steps

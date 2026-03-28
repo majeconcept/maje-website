@@ -80,20 +80,20 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SEO-01**: Les metadata complètes (title, description, OG tags, Twitter cards) sont générées via Next.js Metadata API
 - [x] **SEO-02**: Le Schema.org JSON-LD est implémenté (Organization, LocalBusiness, Service, BreadcrumbList)
 - [x] **SEO-03**: Un `sitemap.xml` et `robots.txt` sont générés automatiquement via `app/sitemap.ts` et `app/robots.ts`
-- [ ] **SEO-04**: Le HTML sémantique est strict (h1 unique, hiérarchie respectée, alt descriptifs sur toutes les images)
+- [x] **SEO-04**: Le HTML sémantique est strict (h1 unique, hiérarchie respectée, alt descriptifs sur toutes les images)
 - [x] **SEO-05**: Les Core Web Vitals sont optimisés : LCP < 2.5s, CLS < 0.1, INP optimisé
 
 ### Animations & Polish
 
 - [x] **ANIM-01**: Toutes les sections ont des scroll-triggered animations GSAP ScrollTrigger
 - [x] **ANIM-02**: Des micro-interactions sont présentes sur tous les éléments interactifs (hover, focus, active)
-- [ ] **ANIM-03**: Les images sont optimisées via `next/image` avec lazy loading (sauf hero : `priority`)
-- [ ] **ANIM-04**: Le code splitting est automatique avec dynamic imports pour les composants lourds
+- [x] **ANIM-03**: Les images sont optimisées via `next/image` avec lazy loading (sauf hero : `priority`)
+- [x] **ANIM-04**: Le code splitting est automatique avec dynamic imports pour les composants lourds
 
 ### Responsive
 
-- [ ] **RESP-01**: Le site est entièrement responsive : mobile, tablette et desktop
-- [ ] **RESP-02**: Les animations lourdes sont réduites ou simplifiées sur mobile pour la performance
+- [x] **RESP-01**: Le site est entièrement responsive : mobile, tablette et desktop
+- [x] **RESP-02**: Les animations lourdes sont réduites ou simplifiées sur mobile pour la performance
 
 ## v2 Requirements
 
@@ -169,14 +169,14 @@ Deferred to future release.
 | SEO-01 | Phase 4 | Complete |
 | SEO-02 | Phase 4 | Complete |
 | SEO-03 | Phase 4 | Complete |
-| SEO-04 | Phase 4 | Pending |
+| SEO-04 | Phase 4 | Complete |
 | SEO-05 | Phase 4 | Complete |
 | ANIM-01 | Phase 2 | Complete |
 | ANIM-02 | Phase 2 | Complete |
-| ANIM-03 | Phase 4 | Pending |
-| ANIM-04 | Phase 4 | Pending |
-| RESP-01 | Phase 4 | Pending |
-| RESP-02 | Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Complete |
+| ANIM-04 | Phase 4 | Complete |
+| RESP-01 | Phase 4 | Complete |
+| RESP-02 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 47 total
