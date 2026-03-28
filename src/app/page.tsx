@@ -1,7 +1,8 @@
+import { MagneticButton } from "@/components/cursor/MagneticButton";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Section placeholder — active les tokens @theme pour vérification visuelle */}
       <section
         id="hero-placeholder"
         className="flex min-h-screen flex-col items-center justify-center gap-8 px-8"
@@ -12,21 +13,36 @@ export default function Home() {
         <p className="text-xl text-brand-cream/70 text-center max-w-lg">
           Impression &amp; Marquage Textile Premium — Alsace
         </p>
-        <div className="flex gap-4">
-          {/* Bouton de test MagneticButton — sera remplacé en Phase 2 */}
-          <button className="px-8 py-4 bg-brand-gold text-brand-black font-bold tracking-widest uppercase text-sm hover:bg-brand-gold-light transition-colors duration-200">
+
+        {/* MagneticButton test — vérifier l'effet magnétique en approchant le curseur */}
+        <div className="flex gap-6">
+          <MagneticButton className="px-8 py-4 bg-brand-gold text-brand-black font-bold tracking-widest uppercase text-sm hover:bg-brand-gold-light">
             Nos Réalisations
-          </button>
-          <button className="px-8 py-4 border border-brand-cream/30 text-brand-cream tracking-widest uppercase text-sm hover:border-brand-cream transition-colors duration-200">
+          </MagneticButton>
+          <MagneticButton
+            className="px-8 py-4 border border-brand-cream/30 text-brand-cream tracking-widest uppercase text-sm hover:border-brand-cream"
+            cursorVariant="hover"
+          >
             Nous Contacter
-          </button>
+          </MagneticButton>
         </div>
 
-        {/* Token smoke test — masqué visuellement mais confirme que les classes compilent */}
-        <div className="hidden">
-          <div className="bg-brand-black bg-brand-charcoal bg-brand-gold bg-brand-gold-light bg-brand-cream bg-brand-muted" />
-          <div className="text-brand-black text-brand-charcoal text-brand-gold text-brand-cream text-brand-muted" />
-          <div className="border-brand-charcoal border-brand-gold" />
+        <p className="text-brand-muted text-sm text-center">
+          Approcher le curseur des boutons à ~80px pour voir l&apos;effet magnétique
+        </p>
+
+        {/* Sections placeholder avec IDs pour tester l'IntersectionObserver (plan 03) */}
+        <div id="realisations" className="h-screen w-full flex items-center justify-center">
+          <span className="text-brand-muted">Section Réalisations (placeholder)</span>
+        </div>
+        <div id="expertises" className="h-screen w-full flex items-center justify-center">
+          <span className="text-brand-muted">Section Expertises (placeholder)</span>
+        </div>
+        <div id="configurateur" className="h-screen w-full flex items-center justify-center">
+          <span className="text-brand-muted">Section Configurateur (placeholder)</span>
+        </div>
+        <div id="contact" className="h-screen w-full flex items-center justify-center">
+          <span className="text-brand-muted">Section Contact (placeholder)</span>
         </div>
       </section>
     </main>
