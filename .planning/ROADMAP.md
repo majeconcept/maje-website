@@ -29,7 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. L'effet magnétique déplace les boutons principaux vers le curseur dans un rayon de ~80px
   4. Le preloader s'affiche, se complète en < 3 secondes, et les animations de page ne se lancent qu'après sa fermeture
   5. La navigation fixe affiche les liens de section avec état actif qui se met à jour au scroll
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 01-01-PLAN.md — Scaffold Next.js 15 + Tailwind v4 @theme + fonts Söhne Breit + gsapConfig + cn()
+- [ ] 01-02-PLAN.md — LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton
+- [ ] 01-03-PLAN.md — AnimationProvider + Preloader + Navigation fixe IntersectionObserver
 **UI hint**: yes
 
 ### Phase 2: Sections Principales
@@ -75,11 +78,11 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Fondations & Design System | 0/? | Not started | - |
+| 1. Fondations & Design System | 0/3 | Ready to execute | - |
 | 2. Sections Principales | 0/? | Not started | - |
 | 3. Interactivité & Conversion | 0/? | Not started | - |
 | 4. SEO & Performance | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-03-28*
-*Last updated: 2026-03-28 after initialization*
+*Last updated: 2026-03-28 — Phase 1 plans defined (3 plans, 3 waves)*

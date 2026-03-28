@@ -10,11 +10,21 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 1 of 4 (Fondations & Design System)
-Plan: 0 of ? in current phase
-Status: Ready to plan
-Last activity: 2026-03-28 — Roadmap created, 47 requirements mapped across 4 phases
+Plan: 0 of 3 in current phase
+Status: Ready to execute — Phase 1 plans complete
+Last activity: 2026-03-28 — Phase 1 planning complete (3 plans created, 3 waves)
 
 Progress: [░░░░░░░░░░] 0%
+
+## Phase 1 Plans
+
+| Plan | Objective | Wave | Status |
+|------|-----------|------|--------|
+| 01-01 | Scaffold Next.js 15 + Tailwind v4 @theme + fonts + gsapConfig + cn() | 1 | Not started |
+| 01-02 | LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton | 2 | Not started |
+| 01-03 | AnimationProvider + Preloader + Navigation fixe IntersectionObserver | 3 | Not started |
+
+**Execution order:** Plans 01-01 → 01-02 → 01-03 (strictly sequential — each depends on the previous)
 
 ## Performance Metrics
 
@@ -49,17 +59,29 @@ Recent decisions affecting current work:
 - SVG layer composition pour le configurateur (pas Three.js — évite +200KB bundle)
 - `motion` package (pas `framer-motion` — renommé)
 - `lenis` package (pas `@studio-freight/lenis` — renommé)
+- Fonts locales: TestSohneBreit-Buch.otf + TestSohneBreit-Dreiviertelfett.otf via next/font/local
+- Palette: noir profond (oklch 0.10) + or chaud (oklch 0.72) + crème (oklch 0.96) — jamais de violet
+- Provider order: LenisProvider → CursorProvider → AnimationProvider (non négociable)
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Session Continuity
 
 Last session: 2026-03-28
-Stopped at: Roadmap created and written to disk. Ready to begin Phase 1 planning.
+Stopped at: Phase 1 planning complete. 3 plans written to .planning/phases/01-fondations/. Ready to execute plan 01-01.
 Resume file: None
+
+## Next Steps
+
+Execute Phase 1:
+1. Start with plan 01-01 (scaffold)
+2. Then 01-02 (cursor + providers)
+3. Then 01-03 (preloader + navigation)
+
+Command: `/gsd:execute-phase 01-fondations`
