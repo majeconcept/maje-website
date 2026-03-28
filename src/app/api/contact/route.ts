@@ -4,8 +4,6 @@ import { contactFormSchema } from "@/lib/validations";
 import { NotificationEmail } from "@/components/emails/NotificationEmail";
 import { ConfirmationEmail } from "@/components/emails/ConfirmationEmail";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // In-memory rate limiting — resets on process restart (acceptable for low-volume v1)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
@@ -71,6 +69,7 @@ export async function POST(request: NextRequest) {
   // 4. Send notification email to Maje Concept
   // Use onboarding@resend.dev in dev (no domain verification needed)
   // Switch to noreply@maje-concept.fr after domain verification in Resend dashboard
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const fromAddress =
     process.env.RESEND_FROM_ADDRESS ?? "onboarding@resend.dev";
   const toAddress = process.env.CONTACT_EMAIL ?? "contact@maje-concept.fr";
