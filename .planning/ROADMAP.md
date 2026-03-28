@@ -62,7 +62,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. La soumission du formulaire déclenche un email de notification à Maje Concept et un email de confirmation au prospect via Resend, puis affiche une animation de succès
   4. Le footer complet est visible avec navigation, coordonnées, réseaux sociaux et formulaire newsletter
 **Plans**: 3 plans
-- [ ] 03-01-PLAN.md — ConfiguratorContext + configurator.ts data layer + ConfiguratorSection SVG 4 calques
+- [x] 03-01-PLAN.md — ConfiguratorContext + configurator.ts data layer + ConfiguratorSection SVG 4 calques
 - [ ] 03-02-PLAN.md — ContactSection (react-hook-form + Zod + Resend) + validations.ts + Route Handler + email templates
 - [ ] 03-03-PLAN.md — Footer 4 colonnes + newsletter + câblage final page.tsx
 **UI hint**: yes

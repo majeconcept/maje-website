@@ -57,10 +57,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Configurateur Produit
 
-- [ ] **CONF-01**: Une interface de sélection en temps réel permet de choisir matières, couleurs, dimensions et finitions pour des produits textiles
-- [ ] **CONF-02**: Un preview 2D (SVG layer composition) se met à jour instantanément selon les choix
-- [ ] **CONF-03**: Un résumé de la configuration est affiché avec estimation de prix ou invitation à demander un devis
-- [ ] **CONF-04**: Un bouton "Demander un devis" pré-remplit le formulaire de contact avec la configuration choisie
+- [x] **CONF-01**: Une interface de sélection en temps réel permet de choisir matières, couleurs, dimensions et finitions pour des produits textiles
+- [x] **CONF-02**: Un preview 2D (SVG layer composition) se met à jour instantanément selon les choix
+- [x] **CONF-03**: Un résumé de la configuration est affiché avec estimation de prix ou invitation à demander un devis
+- [x] **CONF-04**: Un bouton "Demander un devis" pré-remplit le formulaire de contact avec la configuration choisie
 
 ### Formulaire de Contact
 
@@ -155,10 +155,10 @@ Deferred to future release.
 | SOCL-01 | Phase 2 | Complete |
 | SOCL-02 | Phase 2 | Complete |
 | SOCL-03 | Phase 2 | Complete |
-| CONF-01 | Phase 3 | Pending |
-| CONF-02 | Phase 3 | Pending |
-| CONF-03 | Phase 3 | Pending |
-| CONF-04 | Phase 3 | Pending |
+| CONF-01 | Phase 3 | Complete |
+| CONF-02 | Phase 3 | Complete |
+| CONF-03 | Phase 3 | Complete |
+| CONF-04 | Phase 3 | Complete |
 | CONT-01 | Phase 3 | Pending |
 | CONT-02 | Phase 3 | Pending |
 | CONT-03 | Phase 3 | Pending |
