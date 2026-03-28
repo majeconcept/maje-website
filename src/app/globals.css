@@ -94,3 +94,13 @@ html {
   70%  { opacity: 1; }
   100% { transform: translateY(250%); opacity: 0; }
 }
+
+/* ── Logo carousel marquee (LogoCarousel) ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.logo-marquee {
+  animation: marquee 25s linear infinite;
+}
