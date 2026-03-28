@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-conversion-03-03-PLAN.md
-last_updated: "2026-03-28T20:02:15.687Z"
+stopped_at: Phase 4 planned — ready to execute 04-01
+last_updated: "2026-03-28T20:30:00.000Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
   completed_phases: 3
-  total_plans: 10
+  total_plans: 12
   completed_plans: 10
-  percent: 14
+  percent: 83
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-28)
 
 **Core value:** Chaque visiteur est immédiatement impressionné par l'expérience visuelle et convertit en lead qualifié — l'impression de qualité dès les 3 premières secondes est la priorité absolue
-**Current focus:** Phase 3 — Interactivité & Conversion
+**Current focus:** Phase 4 — SEO & Performance
 
 ## Current Position
 
-Phase: 3 of 4 (Interactivité & Conversion)
-Plan: 3 of 3 in current phase (planning complete, ready to execute)
+Phase: 4 of 4 (SEO & Performance)
+Plan: 0 of 2 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
-Progress: [████░░░░░░] 14% (7/10 plans across phases 1-3 planned)
+Progress: [████████░░] 83% (10/12 plans across phases 1-4)
 
 ## Phase 1 Plans — Complete
 
@@ -49,23 +49,30 @@ Progress: [████░░░░░░] 14% (7/10 plans across phases 1-3 pla
 | 02-03 | Section Expertises : AnimatedCounter KPI + icônes SVG + ScrollTrigger | 3 | Complete |
 | 02-04 | Section Social Proof : logo carousel CSS marquee + témoignages bento + page.tsx final | 4 | Complete |
 
-## Phase 3 Plans
+## Phase 3 Plans — Complete
 
 | Plan | Objective | Wave | Status |
 |------|-----------|------|--------|
-| 03-01 | ConfiguratorContext + data layer + ConfiguratorSection SVG 4 calques | 1 | Not started |
-| 03-02 | ContactSection (RHF + Zod + Resend) + Route Handler + email templates | 2 | Not started |
-| 03-03 | Footer 4 colonnes + newsletter + câblage final page.tsx | 3 | Not started |
+| 03-01 | ConfiguratorContext + data layer + ConfiguratorSection SVG 4 calques | 1 | Complete |
+| 03-02 | ContactSection (RHF + Zod + Resend) + Route Handler + email templates | 2 | Complete |
+| 03-03 | Footer 4 colonnes + newsletter + câblage final page.tsx | 3 | Complete |
 
-**Execution order:** Strictly sequential 03-01 → 03-02 → 03-03 (each depends on prior)
+## Phase 4 Plans
+
+| Plan | Objective | Wave | Status |
+|------|-----------|------|--------|
+| 04-01 | layout.tsx metadata complètes + JSON-LD LocalBusiness + adjustFontFallback + sitemap.ts + robots.ts | 1 | Not started |
+| 04-02 | globals.css cursor touch guard + dynamic imports sections lourdes + gsap.matchMedia() + build final | 2 | Not started |
+
+**Execution order:** Strictly sequential 04-01 → 04-02 (04-02 depends_on 04-01 for build validation)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 7
+- Total plans completed: 10
 - Average duration: ~7 min/plan
-- Total execution time: ~49 min
+- Total execution time: ~70 min
 
 **By Phase:**
 
@@ -131,7 +138,13 @@ Recent decisions affecting current work:
 - [Phase 03-conversion]: Inline SVG 4-layer composition for garment preview — no canvas, no Three.js, React state drives fill prop directly
 - [Phase 03-conversion]: useAnimation imported from @/components/providers/AnimationProvider — consistent with all other section components
 - [Phase 03-conversion]: ConfirmationEmail failure is non-blocking — notification email is primary, server returns 200 regardless
-- [Phase 03-conversion]: Newsletter form client-side only in v1 — success state without backend (Phase 4/v2 will connect Mailchimp/Brevo) — Frontend-only newsletter is intentional — Phase 3 Context spec defers backend to Phase 4
+- [Phase 03-conversion]: Newsletter form client-side only in v1 — success state without backend
+- [Phase 04 Planning]: JSON-LD via native <script type="application/ld+json"> in layout.tsx — NOT next/script (causes hydration mismatch)
+- [Phase 04 Planning]: metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://maje-concept.fr') — mandatory for relative OG image URLs
+- [Phase 04 Planning]: adjustFontFallback: 'Arial' on sohneBreit localFont — eliminates FOUT-induced CLS
+- [Phase 04 Planning]: dynamic() ssr:true for PortfolioSection, ExpertiseSection, SocialProofSection, ConfiguratorSection — HTML SSR preserved, JS deferred
+- [Phase 04 Planning]: gsap.matchMedia() isDesktop(min-width:769px) && !reduceMotion — animations skipped on mobile and prefers-reduced-motion
+- [Phase 04 Planning]: HeroSection, ContactSection, Footer stay eager (not dynamic()) — above-fold or small
 
 ### Pending Todos
 
@@ -143,16 +156,15 @@ RESEND_API_KEY needed for email sending to work at runtime. Build succeeds witho
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:02:01.536Z
-Stopped at: Completed 03-conversion-03-03-PLAN.md
+Last session: 2026-03-28T20:30:00.000Z
+Stopped at: Phase 4 planned — 04-01-PLAN.md and 04-02-PLAN.md created
 Resume file: None
 
 ## Next Steps
 
-Execute Phase 3:
+Execute Phase 4:
 
-1. **Next: 03-01** — ConfiguratorContext + data layer + ConfiguratorSection
-2. Then: 03-02 — ContactSection (react-hook-form + Resend + AnimatePresence)
-3. Then: 03-03 — Footer + final page.tsx wiring
+1. **Next: 04-01** — layout.tsx metadata + JSON-LD + adjustFontFallback + sitemap.ts + robots.ts
+2. Then: 04-02 — cursor CSS guard + dynamic imports + gsap.matchMedia() + final build
 
-Command: `/gsd:execute-phase 03-conversion`
+Command: `/gsd:execute-phase 04-seo`
