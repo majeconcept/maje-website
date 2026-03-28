@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { CursorProvider } from "@/components/providers/CursorProvider";
+import { AnimationProvider } from "@/components/providers/AnimationProvider";
 import { CustomCursor } from "@/components/cursor/CustomCursor";
+import { Navigation } from "@/components/navigation/Navigation";
 
 const sohneBreit = localFont({
   src: [
@@ -37,12 +39,22 @@ export default function RootLayout({
   return (
     <html lang="fr" className={sohneBreit.variable}>
       <body className="bg-brand-black text-brand-cream font-display antialiased">
+        {/*
+          Provider order — NEVER change this sequence:
+          1. LenisProvider — smooth scroll + single GSAP RAF loop
+          2. CursorProvider — cursor variant string context
+          3. AnimationProvider — preloader gate (isReady flag)
+
+          CustomCursor: inside CursorProvider, outside AnimationProvider (global overlay)
+          Navigation: inside AnimationProvider (may read isReady in future)
+        */}
         <LenisProvider>
           <CursorProvider>
-            {/* CustomCursor must be inside CursorProvider (consumes useCursor hook) */}
             <CustomCursor />
-            {/* AnimationProvider + Navigation injected in plan 03 */}
-            {children}
+            <AnimationProvider>
+              <Navigation />
+              {children}
+            </AnimationProvider>
           </CursorProvider>
         </LenisProvider>
       </body>
