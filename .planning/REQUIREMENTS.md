@@ -31,10 +31,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Hero Section
 
-- [ ] **HERO-01**: Le hero affiche un titre en typographie expressive animé ligne par ligne via GSAP SplitText
-- [ ] **HERO-02**: Les éléments du hero apparaissent en séquence orchestrée (staggered reveals)
-- [ ] **HERO-03**: Un effet parallax multi-couches (scroll + souris) crée un effet de profondeur 3D avec éléments à différentes vitesses (depth 0.1-0.5)
-- [ ] **HERO-04**: Deux CTAs principaux mènent vers le configurateur et le formulaire de contact
+- [x] **HERO-01**: Le hero affiche un titre en typographie expressive animé ligne par ligne via GSAP SplitText
+- [x] **HERO-02**: Les éléments du hero apparaissent en séquence orchestrée (staggered reveals)
+- [x] **HERO-03**: Un effet parallax multi-couches (scroll + souris) crée un effet de profondeur 3D avec éléments à différentes vitesses (depth 0.1-0.5)
+- [x] **HERO-04**: Deux CTAs principaux mènent vers le configurateur et le formulaire de contact
 
 ### Portfolio / Réalisations
 
@@ -86,7 +86,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Animations & Polish
 
 - [ ] **ANIM-01**: Toutes les sections ont des scroll-triggered animations GSAP ScrollTrigger
-- [ ] **ANIM-02**: Des micro-interactions sont présentes sur tous les éléments interactifs (hover, focus, active)
+- [x] **ANIM-02**: Des micro-interactions sont présentes sur tous les éléments interactifs (hover, focus, active)
 - [ ] **ANIM-03**: Les images sont optimisées via `next/image` avec lazy loading (sauf hero : `priority`)
 - [ ] **ANIM-04**: Le code splitting est automatique avec dynamic imports pour les composants lourds
 
@@ -141,10 +141,10 @@ Deferred to future release.
 | NAV-01 | Phase 1 | Complete |
 | NAV-02 | Phase 1 | Complete |
 | NAV-03 | Phase 1 | Complete |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
 | PORT-01 | Phase 2 | Pending |
 | PORT-02 | Phase 2 | Pending |
 | PORT-03 | Phase 2 | Pending |
@@ -172,7 +172,7 @@ Deferred to future release.
 | SEO-04 | Phase 4 | Pending |
 | SEO-05 | Phase 4 | Pending |
 | ANIM-01 | Phase 2 | Pending |
-| ANIM-02 | Phase 2 | Pending |
+| ANIM-02 | Phase 2 | Complete |
 | ANIM-03 | Phase 4 | Pending |
 | ANIM-04 | Phase 4 | Pending |
 | RESP-01 | Phase 4 | Pending |

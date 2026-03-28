@@ -46,7 +46,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Le carrousel de logos clients et les témoignages sont affichés avec scroll infini horizontal
   5. Chaque section déclenche ses animations GSAP ScrollTrigger en entrant dans le viewport, et tous les éléments interactifs ont des micro-interactions hover/focus
 **Plans**: 4 plans
-- [ ] 02-01-PLAN.md — Section Hero : SplitText ligne par ligne + parallax scroll+souris (3 couches) + 2 CTAs MagneticButton
+- [x] 02-01-PLAN.md — Section Hero : SplitText ligne par ligne + parallax scroll+souris (3 couches) + 2 CTAs MagneticButton
 - [ ] 02-02-PLAN.md — Section Portfolio : grille masonry 8 projets + filtres GSAP Flip + hover overlay + lightbox AnimatePresence
 - [ ] 02-03-PLAN.md — Section Expertises : AnimatedCounter KPI (proxy GSAP) + 5 domaines icônes SVG + ScrollTrigger entrance
 - [ ] 02-04-PLAN.md — Section Social Proof : carrousel logos CSS marquee + 3 témoignages bento + câblage final page.tsx

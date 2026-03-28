@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready
-stopped_at: Phase 2 planning complete — ready to execute 02-01
-last_updated: "2026-03-28T16:30:00.000Z"
+status: executing
+stopped_at: Completed 02-sections-02-01-PLAN.md
+last_updated: "2026-03-28T16:15:46.312Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 3
+  completed_plans: 4
   percent: 11
 ---
 
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 2 of 4 (Sections Principales)
-Plan: 0 of 4 in current phase (planning complete, ready to execute)
-Status: Ready to execute Phase 2
+Plan: 1 of 4 in current phase (planning complete, ready to execute)
+Status: Ready to execute
 Last activity: 2026-03-28
 
 Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 planned)
@@ -69,6 +69,7 @@ Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 plan
 | Phase 01-fondations P01 | 25min | 2 tasks | 8 files |
 | Phase 01-fondations P02 | 3min | 2 tasks | 7 files |
 | Phase 01-fondations P03 | 2min | 2 tasks | 4 files |
+| Phase 02-sections P01 | 10 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -97,6 +98,8 @@ Recent decisions affecting current work:
 - [Phase 02 Planning]: GSAP Flip filter pattern: Flip.getState → setActiveFilter → requestAnimationFrame → Flip.from
 - [Phase 02 Planning]: AnimatedCounter uses GSAP proxy object { val: 0 } with onUpdate — not setInterval or React state
 - [Phase 02 Planning]: Logo carousel uses CSS marquee @keyframes (lighter than GSAP ticker) + JS animationPlayState for pause
+- [Phase 02-sections]: Mouse parallax uses xPercent/yPercent to avoid conflict with scroll parallax y property
+- [Phase 02-sections]: MagneticButton handles cursor variant internally — HeroSection does not call setVariant() manually
 
 ### Pending Todos
 
@@ -108,8 +111,8 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28
-Stopped at: Phase 2 planning complete
+Last session: 2026-03-28T16:15:46.309Z
+Stopped at: Completed 02-sections-02-01-PLAN.md
 Resume file: None
 
 ## Next Steps
