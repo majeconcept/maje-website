@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. La navigation fixe affiche les liens de section avec état actif qui se met à jour au scroll
 **Plans**: 3 plans
 - [x] 01-01-PLAN.md — Scaffold Next.js 15 + Tailwind v4 @theme + fonts Söhne Breit + gsapConfig + cn() (2026-03-28)
-- [ ] 01-02-PLAN.md — LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton
+- [x] 01-02-PLAN.md — LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton
 - [ ] 01-03-PLAN.md — AnimationProvider + Preloader + Navigation fixe IntersectionObserver
 **UI hint**: yes
 

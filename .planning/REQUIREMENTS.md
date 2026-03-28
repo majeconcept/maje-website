@@ -12,16 +12,16 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **FOUND-01**: Le projet Next.js 15 App Router est scaffoldé avec TypeScript, Tailwind v4, GSAP, Motion et Lenis correctement configurés
 - [ ] **FOUND-02**: Le design system est défini avec palette distinctive (noir profond + or chaud + blanc cassé), typographie premium (serif + sans), et timing functions custom dans `@theme {}`
 - [ ] **FOUND-03**: Les fonts premium sont chargées via `next/font` avec `font-display: swap` et preload automatique
-- [ ] **FOUND-04**: Lenis smooth scroll est initialisé avec `autoRaf: false` et synchronisé avec le ticker GSAP (un seul RAF loop)
+- [x] **FOUND-04**: Lenis smooth scroll est initialisé avec `autoRaf: false` et synchronisé avec le ticker GSAP (un seul RAF loop)
 
 ### Curseur Custom
 
-- [ ] **CURS-01**: Un curseur custom global remplace le curseur natif avec cercle/forme épurée et `mix-blend-mode: difference`
-- [ ] **CURS-02**: Un follower avec lag intentionnel (lerp 0.08-0.12) suit le curseur principal via GSAP `quickTo`
-- [ ] **CURS-03**: Le curseur change d'état contextuellement : s'agrandit sur les cards portfolio ("Voir"), morphe sur les boutons, réticule sur le configurateur, réduit sur les liens nav
-- [ ] **CURS-04**: Un effet magnétique déplace les boutons principaux vers le curseur dans un rayon de ~80px avec spring return
-- [ ] **CURS-05**: Un spotlight/torchlight effect révèle du contenu sur les sections sombres via gradient radial suivant la souris
-- [ ] **CURS-06**: Le curseur custom est désactivé proprement sur mobile/touch (`pointer: coarse`) avec `pointer-events: none`
+- [x] **CURS-01**: Un curseur custom global remplace le curseur natif avec cercle/forme épurée et `mix-blend-mode: difference`
+- [x] **CURS-02**: Un follower avec lag intentionnel (lerp 0.08-0.12) suit le curseur principal via GSAP `quickTo`
+- [x] **CURS-03**: Le curseur change d'état contextuellement : s'agrandit sur les cards portfolio ("Voir"), morphe sur les boutons, réticule sur le configurateur, réduit sur les liens nav
+- [x] **CURS-04**: Un effet magnétique déplace les boutons principaux vers le curseur dans un rayon de ~80px avec spring return
+- [x] **CURS-05**: Un spotlight/torchlight effect révèle du contenu sur les sections sombres via gradient radial suivant la souris
+- [x] **CURS-06**: Le curseur custom est désactivé proprement sur mobile/touch (`pointer: coarse`) avec `pointer-events: none`
 
 ### Navigation & Preloader
 
@@ -131,13 +131,13 @@ Deferred to future release.
 | FOUND-01 | Phase 1 | Pending |
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
-| CURS-01 | Phase 1 | Pending |
-| CURS-02 | Phase 1 | Pending |
-| CURS-03 | Phase 1 | Pending |
-| CURS-04 | Phase 1 | Pending |
-| CURS-05 | Phase 1 | Pending |
-| CURS-06 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Complete |
+| CURS-01 | Phase 1 | Complete |
+| CURS-02 | Phase 1 | Complete |
+| CURS-03 | Phase 1 | Complete |
+| CURS-04 | Phase 1 | Complete |
+| CURS-05 | Phase 1 | Complete |
+| CURS-06 | Phase 1 | Complete |
 | NAV-01 | Phase 1 | Pending |
 | NAV-02 | Phase 1 | Pending |
 | NAV-03 | Phase 1 | Pending |

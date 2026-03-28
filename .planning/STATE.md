@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-03-28T15:46:38.077Z"
+last_activity: 2026-03-28
+progress:
+  total_phases: 4
+  completed_phases: 0
+  total_plans: 3
+  completed_plans: 2
+  percent: 8
+---
+
 # Project State
 
 ## Project Reference
@@ -10,9 +26,9 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 1 of 4 (Fondations & Design System)
-Plan: 1 of 3 in current phase (01-01 complete)
-Status: Executing — 01-01 done, ready for 01-02
-Last activity: 2026-03-28 — 01-01 complete (scaffold + design system + fonts + GSAP config)
+Plan: 2 of 3 in current phase (01-01 complete)
+Status: Ready to execute
+Last activity: 2026-03-28
 
 Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
 
@@ -29,6 +45,7 @@ Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 1
 - Average duration: 25 min
 - Total execution time: ~0.4 hours
@@ -40,10 +57,12 @@ Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
 | 01-fondations | 1/3 | 25 min | 25 min |
 
 **Recent Trend:**
+
 - Last 5 plans: 25 min
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-fondations P02 | 3min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -65,6 +84,8 @@ Recent decisions affecting current work:
 - tsconfig forceConsistentCasingInFileNames=false — GSAP Flip.js/flip.d.ts case mismatch on macOS HFS+
 - Logo renamed to public/logo.svg (original filename had spaces — cleaner next/image usage)
 - shadcn/ui initialized with @base-ui/react (new shadcn 4.x pattern, not @radix-ui directly)
+- [Phase 01-fondations]: GSAP ticker drives Lenis RAF (autoRaf: false) — one animation loop instead of two competing RAF calls — Single RAF loop eliminates scroll stutter and ScrollTrigger sync issues
+- [Phase 01-fondations]: Cursor position via GSAP quickTo only — no React useState for x/y coordinates — React reconciler overhead at 60fps adds ~16ms per frame; GSAP writes directly to DOM transform
 
 ### Pending Todos
 
@@ -76,13 +97,14 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28
-Stopped at: 01-01 complete. Next: execute plan 01-02 (LenisProvider + CursorProvider + CustomCursor + MagneticButton).
+Last session: 2026-03-28T15:46:12.693Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
 
 ## Next Steps
 
 Execute Phase 1 continued:
+
 1. ~~01-01 done~~ (scaffold + design system)
 2. **Next: 01-02** — LenisProvider, CursorProvider, CustomCursor 4 layers, MagneticButton
 3. Then 01-03 — AnimationProvider, Preloader, Navigation
