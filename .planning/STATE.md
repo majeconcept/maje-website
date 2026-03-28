@@ -10,17 +10,17 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 1 of 4 (Fondations & Design System)
-Plan: 0 of 3 in current phase
-Status: Ready to execute — Phase 1 plans complete
-Last activity: 2026-03-28 — Phase 1 planning complete (3 plans created, 3 waves)
+Plan: 1 of 3 in current phase (01-01 complete)
+Status: Executing — 01-01 done, ready for 01-02
+Last activity: 2026-03-28 — 01-01 complete (scaffold + design system + fonts + GSAP config)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
 
 ## Phase 1 Plans
 
 | Plan | Objective | Wave | Status |
 |------|-----------|------|--------|
-| 01-01 | Scaffold Next.js 15 + Tailwind v4 @theme + fonts + gsapConfig + cn() | 1 | Not started |
+| 01-01 | Scaffold Next.js 15 + Tailwind v4 @theme + fonts + gsapConfig + cn() | 1 | Complete (d012a86) |
 | 01-02 | LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton | 2 | Not started |
 | 01-03 | AnimationProvider + Preloader + Navigation fixe IntersectionObserver | 3 | Not started |
 
@@ -29,18 +29,18 @@ Progress: [░░░░░░░░░░] 0%
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: — min
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 25 min
+- Total execution time: ~0.4 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-fondations | 1/3 | 25 min | 25 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: 25 min
 - Trend: —
 
 *Updated after each plan completion*
@@ -62,6 +62,9 @@ Recent decisions affecting current work:
 - Fonts locales: TestSohneBreit-Buch.otf + TestSohneBreit-Dreiviertelfett.otf via next/font/local
 - Palette: noir profond (oklch 0.10) + or chaud (oklch 0.72) + crème (oklch 0.96) — jamais de violet
 - Provider order: LenisProvider → CursorProvider → AnimationProvider (non négociable)
+- tsconfig forceConsistentCasingInFileNames=false — GSAP Flip.js/flip.d.ts case mismatch on macOS HFS+
+- Logo renamed to public/logo.svg (original filename had spaces — cleaner next/image usage)
+- shadcn/ui initialized with @base-ui/react (new shadcn 4.x pattern, not @radix-ui directly)
 
 ### Pending Todos
 
@@ -74,14 +77,14 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-28
-Stopped at: Phase 1 planning complete. 3 plans written to .planning/phases/01-fondations/. Ready to execute plan 01-01.
+Stopped at: 01-01 complete. Next: execute plan 01-02 (LenisProvider + CursorProvider + CustomCursor + MagneticButton).
 Resume file: None
 
 ## Next Steps
 
-Execute Phase 1:
-1. Start with plan 01-01 (scaffold)
-2. Then 01-02 (cursor + providers)
-3. Then 01-03 (preloader + navigation)
+Execute Phase 1 continued:
+1. ~~01-01 done~~ (scaffold + design system)
+2. **Next: 01-02** — LenisProvider, CursorProvider, CustomCursor 4 layers, MagneticButton
+3. Then 01-03 — AnimationProvider, Preloader, Navigation
 
-Command: `/gsd:execute-phase 01-fondations`
+Command: `/gsd:execute-phase 01-fondations` (will pick up at 01-02)
