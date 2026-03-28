@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-03-28T15:46:38.077Z"
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-03-28T15:51:08.038Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
   percent: 8
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 1 of 4 (Fondations & Design System)
-Plan: 2 of 3 in current phase (01-01 complete)
+Plan: 3 of 3 in current phase (01-01 complete)
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -63,6 +63,7 @@ Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
 
 *Updated after each plan completion*
 | Phase 01-fondations P02 | 3min | 2 tasks | 7 files |
+| Phase 01-fondations P03 | 2min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -86,6 +87,7 @@ Recent decisions affecting current work:
 - shadcn/ui initialized with @base-ui/react (new shadcn 4.x pattern, not @radix-ui directly)
 - [Phase 01-fondations]: GSAP ticker drives Lenis RAF (autoRaf: false) — one animation loop instead of two competing RAF calls — Single RAF loop eliminates scroll stutter and ScrollTrigger sync issues
 - [Phase 01-fondations]: Cursor position via GSAP quickTo only — no React useState for x/y coordinates — React reconciler overhead at 60fps adds ~16ms per frame; GSAP writes directly to DOM transform
+- [Phase 01-fondations]: hasCompletedRef guard prevents race condition between timeout and gsap onComplete — Both use same complete() function, only first call wins via boolean ref
 
 ### Pending Todos
 
@@ -97,8 +99,8 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28T15:46:12.693Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-03-28T15:51:08.035Z
+Stopped at: Completed 01-03-PLAN.md
 Resume file: None
 
 ## Next Steps

@@ -25,9 +25,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation & Preloader
 
-- [ ] **NAV-01**: Une navigation fixe affiche les liens vers chaque section avec état actif basé sur la position de scroll
-- [ ] **NAV-02**: Un preloader élégant (logo animé + progression) masque le chargement initial en < 3 secondes
-- [ ] **NAV-03**: Les animations d'entrée des sections sont gatées par l'AnimationProvider (ne se lancent qu'après le preloader)
+- [x] **NAV-01**: Une navigation fixe affiche les liens vers chaque section avec état actif basé sur la position de scroll
+- [x] **NAV-02**: Un preloader élégant (logo animé + progression) masque le chargement initial en < 3 secondes
+- [x] **NAV-03**: Les animations d'entrée des sections sont gatées par l'AnimationProvider (ne se lancent qu'après le preloader)
 
 ### Hero Section
 
@@ -138,9 +138,9 @@ Deferred to future release.
 | CURS-04 | Phase 1 | Complete |
 | CURS-05 | Phase 1 | Complete |
 | CURS-06 | Phase 1 | Complete |
-| NAV-01 | Phase 1 | Pending |
-| NAV-02 | Phase 1 | Pending |
-| NAV-03 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Complete |
+| NAV-02 | Phase 1 | Complete |
+| NAV-03 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
 | HERO-03 | Phase 2 | Pending |
