@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 01-03-PLAN.md
-last_updated: "2026-03-28T15:51:08.038Z"
+status: ready
+stopped_at: Phase 2 planning complete — ready to execute 02-01
+last_updated: "2026-03-28T16:30:00.000Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 3
+  total_plans: 7
   completed_plans: 3
-  percent: 8
+  percent: 11
 ---
 
 # Project State
@@ -21,47 +21,52 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-28)
 
 **Core value:** Chaque visiteur est immédiatement impressionné par l'expérience visuelle et convertit en lead qualifié — l'impression de qualité dès les 3 premières secondes est la priorité absolue
-**Current focus:** Phase 1 — Fondations & Design System
+**Current focus:** Phase 2 — Sections Principales
 
 ## Current Position
 
-Phase: 1 of 4 (Fondations & Design System)
-Plan: 3 of 3 in current phase (01-01 complete)
-Status: Ready to execute
+Phase: 2 of 4 (Sections Principales)
+Plan: 0 of 4 in current phase (planning complete, ready to execute)
+Status: Ready to execute Phase 2
 Last activity: 2026-03-28
 
-Progress: [███░░░░░░░] 8% (1/12 plans across all phases)
+Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 planned)
 
-## Phase 1 Plans
+## Phase 1 Plans — Complete
 
 | Plan | Objective | Wave | Status |
 |------|-----------|------|--------|
-| 01-01 | Scaffold Next.js 15 + Tailwind v4 @theme + fonts + gsapConfig + cn() | 1 | Complete (d012a86) |
-| 01-02 | LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton | 2 | Not started |
-| 01-03 | AnimationProvider + Preloader + Navigation fixe IntersectionObserver | 3 | Not started |
+| 01-01 | Scaffold Next.js 15 + Tailwind v4 @theme + fonts + gsapConfig + cn() | 1 | Complete |
+| 01-02 | LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton | 2 | Complete |
+| 01-03 | AnimationProvider + Preloader + Navigation fixe IntersectionObserver | 3 | Complete |
 
-**Execution order:** Plans 01-01 → 01-02 → 01-03 (strictly sequential — each depends on the previous)
+## Phase 2 Plans
+
+| Plan | Objective | Wave | Status |
+|------|-----------|------|--------|
+| 02-01 | Section Hero : SplitText + parallax 3 couches + MagneticButton CTAs | 1 | Not started |
+| 02-02 | Section Portfolio : masonry 8 projets + GSAP Flip filters + lightbox | 2 | Not started |
+| 02-03 | Section Expertises : AnimatedCounter KPI + icônes SVG + ScrollTrigger | 3 | Not started |
+| 02-04 | Section Social Proof : logo carousel CSS marquee + témoignages bento + page.tsx final | 4 | Not started |
+
+**Execution order:** Strictly sequential 02-01 → 02-02 → 02-03 → 02-04 (each depends on prior)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 1
-- Average duration: 25 min
-- Total execution time: ~0.4 hours
+- Total plans completed: 3
+- Average duration: ~10 min/plan
+- Total execution time: ~0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-fondations | 1/3 | 25 min | 25 min |
-
-**Recent Trend:**
-
-- Last 5 plans: 25 min
-- Trend: —
+| 01-fondations | 3/3 | 30 min | 10 min |
 
 *Updated after each plan completion*
+| Phase 01-fondations P01 | 25min | 2 tasks | 8 files |
 | Phase 01-fondations P02 | 3min | 2 tasks | 7 files |
 | Phase 01-fondations P03 | 2min | 2 tasks | 4 files |
 
@@ -85,9 +90,13 @@ Recent decisions affecting current work:
 - tsconfig forceConsistentCasingInFileNames=false — GSAP Flip.js/flip.d.ts case mismatch on macOS HFS+
 - Logo renamed to public/logo.svg (original filename had spaces — cleaner next/image usage)
 - shadcn/ui initialized with @base-ui/react (new shadcn 4.x pattern, not @radix-ui directly)
-- [Phase 01-fondations]: GSAP ticker drives Lenis RAF (autoRaf: false) — one animation loop instead of two competing RAF calls — Single RAF loop eliminates scroll stutter and ScrollTrigger sync issues
-- [Phase 01-fondations]: Cursor position via GSAP quickTo only — no React useState for x/y coordinates — React reconciler overhead at 60fps adds ~16ms per frame; GSAP writes directly to DOM transform
-- [Phase 01-fondations]: hasCompletedRef guard prevents race condition between timeout and gsap onComplete — Both use same complete() function, only first call wins via boolean ref
+- [Phase 01-fondations]: GSAP ticker drives Lenis RAF (autoRaf: false) — one animation loop instead of two competing RAF calls
+- [Phase 01-fondations]: Cursor position via GSAP quickTo only — no React useState for x/y coordinates
+- [Phase 01-fondations]: hasCompletedRef guard prevents race condition between timeout and gsap onComplete
+- [Phase 02 Planning]: SplitText.create() new API (3.13+) with mask:"lines" for hero reveal — not new SplitText() old API
+- [Phase 02 Planning]: GSAP Flip filter pattern: Flip.getState → setActiveFilter → requestAnimationFrame → Flip.from
+- [Phase 02 Planning]: AnimatedCounter uses GSAP proxy object { val: 0 } with onUpdate — not setInterval or React state
+- [Phase 02 Planning]: Logo carousel uses CSS marquee @keyframes (lighter than GSAP ticker) + JS animationPlayState for pause
 
 ### Pending Todos
 
@@ -99,16 +108,17 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28T15:51:08.035Z
-Stopped at: Completed 01-03-PLAN.md
+Last session: 2026-03-28
+Stopped at: Phase 2 planning complete
 Resume file: None
 
 ## Next Steps
 
-Execute Phase 1 continued:
+Execute Phase 2:
 
-1. ~~01-01 done~~ (scaffold + design system)
-2. **Next: 01-02** — LenisProvider, CursorProvider, CustomCursor 4 layers, MagneticButton
-3. Then 01-03 — AnimationProvider, Preloader, Navigation
+1. **Next: 02-01** — Section Hero (SplitText + parallax + CTAs)
+2. Then: 02-02 — Section Portfolio (masonry + Flip filters + lightbox)
+3. Then: 02-03 — Section Expertises (KPI counters + SVG icons)
+4. Then: 02-04 — Section Social Proof (logo carousel + testimonials + page.tsx wiring)
 
-Command: `/gsd:execute-phase 01-fondations` (will pick up at 01-02)
+Command: `/gsd:execute-phase 02-sections`
