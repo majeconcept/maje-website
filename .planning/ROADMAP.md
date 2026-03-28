@@ -63,7 +63,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Le footer complet est visible avec navigation, coordonnées, réseaux sociaux et formulaire newsletter
 **Plans**: 3 plans
 - [x] 03-01-PLAN.md — ConfiguratorContext + configurator.ts data layer + ConfiguratorSection SVG 4 calques
-- [ ] 03-02-PLAN.md — ContactSection (react-hook-form + Zod + Resend) + validations.ts + Route Handler + email templates
+- [x] 03-02-PLAN.md — ContactSection (react-hook-form + Zod + Resend) + validations.ts + Route Handler + email templates
 - [ ] 03-03-PLAN.md — Footer 4 colonnes + newsletter + câblage final page.tsx
 **UI hint**: yes
 
@@ -87,7 +87,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
 | 2. Sections Principales | 4/4 | Complete   | 2026-03-28 |
-| 3. Interactivité & Conversion | 0/3 | Planned | - |
+| 3. Interactivité & Conversion | 2/3 | In Progress|  |
 | 4. SEO & Performance | 0/? | Not started | - |
 
 ---

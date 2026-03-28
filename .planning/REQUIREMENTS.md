@@ -64,11 +64,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Formulaire de Contact
 
-- [ ] **CONT-01**: Le formulaire inclut : nom, prénom, email, téléphone, entreprise, type de besoin (select), message, et configuration produit (si provenant du configurateur)
-- [ ] **CONT-02**: La validation frontend est en temps réel avec messages d'erreur élégants (react-hook-form + Zod)
-- [ ] **CONT-03**: Un API route Next.js (`/api/contact`) envoie un email de notification à Maje Concept via Resend avec toutes les infos structurées
-- [ ] **CONT-04**: Un email de confirmation automatique est envoyé au prospect avec template HTML professionnel
-- [ ] **CONT-05**: Une animation de succès satisfaisante s'affiche après soumission réussie
+- [x] **CONT-01**: Le formulaire inclut : nom, prénom, email, téléphone, entreprise, type de besoin (select), message, et configuration produit (si provenant du configurateur)
+- [x] **CONT-02**: La validation frontend est en temps réel avec messages d'erreur élégants (react-hook-form + Zod)
+- [x] **CONT-03**: Un API route Next.js (`/api/contact`) envoie un email de notification à Maje Concept via Resend avec toutes les infos structurées
+- [x] **CONT-04**: Un email de confirmation automatique est envoyé au prospect avec template HTML professionnel
+- [x] **CONT-05**: Une animation de succès satisfaisante s'affiche après soumission réussie
 
 ### Footer
 
@@ -159,11 +159,11 @@ Deferred to future release.
 | CONF-02 | Phase 3 | Complete |
 | CONF-03 | Phase 3 | Complete |
 | CONF-04 | Phase 3 | Complete |
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
-| CONT-05 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
+| CONT-05 | Phase 3 | Complete |
 | FOOT-01 | Phase 3 | Pending |
 | FOOT-02 | Phase 3 | Pending |
 | SEO-01 | Phase 4 | Pending |
