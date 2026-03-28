@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { LenisProvider } from "@/components/providers/LenisProvider";
+import { CursorProvider } from "@/components/providers/CursorProvider";
 
 const sohneBreit = localFont({
   src: [
@@ -35,11 +37,18 @@ export default function RootLayout({
     <html lang="fr" className={sohneBreit.variable}>
       <body className="bg-brand-black text-brand-cream font-display antialiased">
         {/*
-          Provider stack injecté par les plans suivants:
-          LenisProvider → CursorProvider → AnimationProvider → Navigation + CustomCursor + children
-          Ne pas modifier l'ordre.
+          Provider order is MANDATORY:
+          1. LenisProvider — initializes smooth scroll + GSAP ticker
+          2. CursorProvider — cursor variant context (NOT position)
+          3. AnimationProvider — added in plan 03 (preloader gate)
+          Reversing any two breaks the dependency chain.
         */}
-        {children}
+        <LenisProvider>
+          <CursorProvider>
+            {/* AnimationProvider + Navigation + CustomCursor injected in plan 03 */}
+            {children}
+          </CursorProvider>
+        </LenisProvider>
       </body>
     </html>
   );
