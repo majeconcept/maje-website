@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 4 planned — ready to execute 04-01
-last_updated: "2026-03-28T20:30:00.000Z"
+stopped_at: Completed 04-seo-01-PLAN.md
+last_updated: "2026-03-28T20:17:28.932Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
   completed_phases: 3
   total_plans: 12
-  completed_plans: 10
+  completed_plans: 11
   percent: 83
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 4 of 4 (SEO & Performance)
-Plan: 0 of 2 in current phase (planning complete, ready to execute)
+Plan: 1 of 2 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -91,6 +91,7 @@ Progress: [████████░░] 83% (10/12 plans across phases 1-4)
 | Phase 03-conversion P01 | 18 | 2 tasks | 4 files |
 | Phase 03-conversion P02 | 12 | 2 tasks | 7 files |
 | Phase 03-conversion P03 | 2min | 2 tasks | 2 files |
+| Phase 04-seo P01 | 8 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -145,6 +146,8 @@ Recent decisions affecting current work:
 - [Phase 04 Planning]: dynamic() ssr:true for PortfolioSection, ExpertiseSection, SocialProofSection, ConfiguratorSection — HTML SSR preserved, JS deferred
 - [Phase 04 Planning]: gsap.matchMedia() isDesktop(min-width:769px) && !reduceMotion — animations skipped on mobile and prefers-reduced-motion
 - [Phase 04 Planning]: HeroSection, ContactSection, Footer stay eager (not dynamic()) — above-fold or small
+- [Phase 04-seo]: JSON-LD via native script tag (not next/script) — structured data must be inline in SSR HTML
+- [Phase 04-seo]: adjustFontFallback: Arial on sohneBreit to eliminate FOUT-driven CLS
 
 ### Pending Todos
 
@@ -156,8 +159,8 @@ RESEND_API_KEY needed for email sending to work at runtime. Build succeeds witho
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:30:00.000Z
-Stopped at: Phase 4 planned — 04-01-PLAN.md and 04-02-PLAN.md created
+Last session: 2026-03-28T20:17:28.927Z
+Stopped at: Completed 04-seo-01-PLAN.md
 Resume file: None
 
 ## Next Steps

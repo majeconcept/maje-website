@@ -77,7 +77,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Un audit Lighthouse ou PageSpeed Insights confirme LCP < 2.5s et CLS < 0.1 sur desktop
   4. Le site est entièrement fonctionnel et visuellement correct sur mobile (320px+), tablette et desktop, avec animations simplifiées sur mobile
 **Plans**: 2 plans
-- [ ] 04-01-PLAN.md — layout.tsx metadata complètes + JSON-LD LocalBusiness + adjustFontFallback + sitemap.ts + robots.ts
+- [x] 04-01-PLAN.md — layout.tsx metadata complètes + JSON-LD LocalBusiness + adjustFontFallback + sitemap.ts + robots.ts
 - [ ] 04-02-PLAN.md — globals.css cursor touch guard + dynamic imports sections lourdes + gsap.matchMedia() + build final
 
 ## Progress
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
 | 2. Sections Principales | 4/4 | Complete   | 2026-03-28 |
 | 3. Interactivité & Conversion | 3/3 | Complete | 2026-03-28 |
-| 4. SEO & Performance | 0/2 | Planned | - |
+| 4. SEO & Performance | 1/2 | In Progress|  |
 
 ---
 *Roadmap created: 2026-03-28*

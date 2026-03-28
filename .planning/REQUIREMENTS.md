@@ -77,11 +77,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SEO Technique
 
-- [ ] **SEO-01**: Les metadata complètes (title, description, OG tags, Twitter cards) sont générées via Next.js Metadata API
-- [ ] **SEO-02**: Le Schema.org JSON-LD est implémenté (Organization, LocalBusiness, Service, BreadcrumbList)
-- [ ] **SEO-03**: Un `sitemap.xml` et `robots.txt` sont générés automatiquement via `app/sitemap.ts` et `app/robots.ts`
+- [x] **SEO-01**: Les metadata complètes (title, description, OG tags, Twitter cards) sont générées via Next.js Metadata API
+- [x] **SEO-02**: Le Schema.org JSON-LD est implémenté (Organization, LocalBusiness, Service, BreadcrumbList)
+- [x] **SEO-03**: Un `sitemap.xml` et `robots.txt` sont générés automatiquement via `app/sitemap.ts` et `app/robots.ts`
 - [ ] **SEO-04**: Le HTML sémantique est strict (h1 unique, hiérarchie respectée, alt descriptifs sur toutes les images)
-- [ ] **SEO-05**: Les Core Web Vitals sont optimisés : LCP < 2.5s, CLS < 0.1, INP optimisé
+- [x] **SEO-05**: Les Core Web Vitals sont optimisés : LCP < 2.5s, CLS < 0.1, INP optimisé
 
 ### Animations & Polish
 
@@ -166,11 +166,11 @@ Deferred to future release.
 | CONT-05 | Phase 3 | Complete |
 | FOOT-01 | Phase 3 | Complete |
 | FOOT-02 | Phase 3 | Complete |
-| SEO-01 | Phase 4 | Pending |
-| SEO-02 | Phase 4 | Pending |
-| SEO-03 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Complete |
+| SEO-02 | Phase 4 | Complete |
+| SEO-03 | Phase 4 | Complete |
 | SEO-04 | Phase 4 | Pending |
-| SEO-05 | Phase 4 | Pending |
+| SEO-05 | Phase 4 | Complete |
 | ANIM-01 | Phase 2 | Complete |
 | ANIM-02 | Phase 2 | Complete |
 | ANIM-03 | Phase 4 | Pending |
