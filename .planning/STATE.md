@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-04-PLAN.md
-last_updated: "2026-03-28T19:29:37.357Z"
+stopped_at: Phase 3 planned — ready to execute 03-01
+last_updated: "2026-03-28T20:00:00.000Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 7
+  total_plans: 10
   completed_plans: 7
-  percent: 11
+  percent: 14
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-28)
 
 **Core value:** Chaque visiteur est immédiatement impressionné par l'expérience visuelle et convertit en lead qualifié — l'impression de qualité dès les 3 premières secondes est la priorité absolue
-**Current focus:** Phase 2 — Sections Principales
+**Current focus:** Phase 3 — Interactivité & Conversion
 
 ## Current Position
 
-Phase: 2 of 4 (Sections Principales)
-Plan: 4 of 4 in current phase (planning complete, ready to execute)
+Phase: 3 of 4 (Interactivité & Conversion)
+Plan: 0 of 3 in current phase (planning complete, ready to execute)
 Status: Ready to execute
 Last activity: 2026-03-28
 
-Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 planned)
+Progress: [████░░░░░░] 14% (7/10 plans across phases 1-3 planned)
 
 ## Phase 1 Plans — Complete
 
@@ -40,24 +40,32 @@ Progress: [████░░░░░░] 11% (3/7 plans across phases 1-2 plan
 | 01-02 | LenisProvider + CursorProvider + CustomCursor 4 couches + MagneticButton | 2 | Complete |
 | 01-03 | AnimationProvider + Preloader + Navigation fixe IntersectionObserver | 3 | Complete |
 
-## Phase 2 Plans
+## Phase 2 Plans — Complete
 
 | Plan | Objective | Wave | Status |
 |------|-----------|------|--------|
-| 02-01 | Section Hero : SplitText + parallax 3 couches + MagneticButton CTAs | 1 | Not started |
-| 02-02 | Section Portfolio : masonry 8 projets + GSAP Flip filters + lightbox | 2 | Not started |
-| 02-03 | Section Expertises : AnimatedCounter KPI + icônes SVG + ScrollTrigger | 3 | Not started |
-| 02-04 | Section Social Proof : logo carousel CSS marquee + témoignages bento + page.tsx final | 4 | Not started |
+| 02-01 | Section Hero : SplitText + parallax 3 couches + MagneticButton CTAs | 1 | Complete |
+| 02-02 | Section Portfolio : masonry 8 projets + GSAP Flip filters + lightbox | 2 | Complete |
+| 02-03 | Section Expertises : AnimatedCounter KPI + icônes SVG + ScrollTrigger | 3 | Complete |
+| 02-04 | Section Social Proof : logo carousel CSS marquee + témoignages bento + page.tsx final | 4 | Complete |
 
-**Execution order:** Strictly sequential 02-01 → 02-02 → 02-03 → 02-04 (each depends on prior)
+## Phase 3 Plans
+
+| Plan | Objective | Wave | Status |
+|------|-----------|------|--------|
+| 03-01 | ConfiguratorContext + data layer + ConfiguratorSection SVG 4 calques | 1 | Not started |
+| 03-02 | ContactSection (RHF + Zod + Resend) + Route Handler + email templates | 2 | Not started |
+| 03-03 | Footer 4 colonnes + newsletter + câblage final page.tsx | 3 | Not started |
+
+**Execution order:** Strictly sequential 03-01 → 03-02 → 03-03 (each depends on prior)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 3
-- Average duration: ~10 min/plan
-- Total execution time: ~0.5 hours
+- Total plans completed: 7
+- Average duration: ~7 min/plan
+- Total execution time: ~49 min
 
 **By Phase:**
 
@@ -108,6 +116,14 @@ Recent decisions affecting current work:
 - [Phase 02-sections]: IconDTF reused for transfert domain — both are thermal/digital transfer techniques
 - [Phase 02-sections]: fr-FR Intl.NumberFormat for KPI >= 1000 — 2000 shows as 2 000 with French thousands separator
 - [Phase 02]: CSS marquee chosen over GSAP ticker for logo carousel — lighter, animationPlayState provides native pause control
+- [Phase 03 Planning]: ConfiguratorContext via React Context (not URL params) — SPA, no need for shareable links
+- [Phase 03 Planning]: ConfiguratorProvider wraps page.tsx content (not layout.tsx) — keeps layout.tsx clean, scoped to Phase 3 components
+- [Phase 03 Planning]: estimatePrice() recalculated synchronously in updateConfig — no useEffect needed
+- [Phase 03 Planning]: Resend from: "onboarding@resend.dev" in dev — no domain verification required
+- [Phase 03 Planning]: Newsletter form frontend-only in v1 — success state shown without backend (backend in v2/Phase 4)
+- [Phase 03 Planning]: AnimatePresence mode="wait" key swap ("form" → "success") for contact success animation
+- [Phase 03 Planning]: import from "motion/react" throughout — NEVER from "framer-motion" (package renamed)
+- [Phase 03 Planning]: Rate limiting in-memory Map (3 req/hour/IP) — no external service for v1
 
 ### Pending Todos
 
@@ -115,21 +131,20 @@ None.
 
 ### Blockers/Concerns
 
-None.
+RESEND_API_KEY needed for email sending to work at runtime. Build succeeds without it — only runtime Resend calls fail. User must add real key to `.env.local` before testing email flow.
 
 ## Session Continuity
 
-Last session: 2026-03-28T19:29:37.354Z
-Stopped at: Completed 02-04-PLAN.md
+Last session: 2026-03-28T20:00:00.000Z
+Stopped at: Phase 3 plans created (03-01, 03-02, 03-03)
 Resume file: None
 
 ## Next Steps
 
-Execute Phase 2:
+Execute Phase 3:
 
-1. **Next: 02-01** — Section Hero (SplitText + parallax + CTAs)
-2. Then: 02-02 — Section Portfolio (masonry + Flip filters + lightbox)
-3. Then: 02-03 — Section Expertises (KPI counters + SVG icons)
-4. Then: 02-04 — Section Social Proof (logo carousel + testimonials + page.tsx wiring)
+1. **Next: 03-01** — ConfiguratorContext + data layer + ConfiguratorSection
+2. Then: 03-02 — ContactSection (react-hook-form + Resend + AnimatePresence)
+3. Then: 03-03 — Footer + final page.tsx wiring
 
-Command: `/gsd:execute-phase 02-sections`
+Command: `/gsd:execute-phase 03-conversion`

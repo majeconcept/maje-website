@@ -61,7 +61,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Le bouton "Demander un devis" depuis le configurateur pré-remplit le formulaire de contact avec la configuration choisie
   3. La soumission du formulaire déclenche un email de notification à Maje Concept et un email de confirmation au prospect via Resend, puis affiche une animation de succès
   4. Le footer complet est visible avec navigation, coordonnées, réseaux sociaux et formulaire newsletter
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 03-01-PLAN.md — ConfiguratorContext + configurator.ts data layer + ConfiguratorSection SVG 4 calques
+- [ ] 03-02-PLAN.md — ContactSection (react-hook-form + Zod + Resend) + validations.ts + Route Handler + email templates
+- [ ] 03-03-PLAN.md — Footer 4 colonnes + newsletter + câblage final page.tsx
 **UI hint**: yes
 
 ### Phase 4: SEO & Performance
@@ -84,9 +87,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
 | 2. Sections Principales | 4/4 | Complete   | 2026-03-28 |
-| 3. Interactivité & Conversion | 0/? | Not started | - |
+| 3. Interactivité & Conversion | 0/3 | Planned | - |
 | 4. SEO & Performance | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-03-28*
-*Last updated: 2026-03-28 — Phase 2 planned (4 plans, waves 1-4)*
+*Last updated: 2026-03-28 — Phase 3 planned (3 plans, waves 1-3)*
