@@ -47,7 +47,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Chaque section déclenche ses animations GSAP ScrollTrigger en entrant dans le viewport, et tous les éléments interactifs ont des micro-interactions hover/focus
 **Plans**: 4 plans
 - [x] 02-01-PLAN.md — Section Hero : SplitText ligne par ligne + parallax scroll+souris (3 couches) + 2 CTAs MagneticButton
-- [ ] 02-02-PLAN.md — Section Portfolio : grille masonry 8 projets + filtres GSAP Flip + hover overlay + lightbox AnimatePresence
+- [x] 02-02-PLAN.md — Section Portfolio : grille masonry 8 projets + filtres GSAP Flip + hover overlay + lightbox AnimatePresence
 - [ ] 02-03-PLAN.md — Section Expertises : AnimatedCounter KPI (proxy GSAP) + 5 domaines icônes SVG + ScrollTrigger entrance
 - [ ] 02-04-PLAN.md — Section Social Proof : carrousel logos CSS marquee + 3 témoignages bento + câblage final page.tsx
 **UI hint**: yes
@@ -83,7 +83,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Fondations & Design System | 3/3 | Complete | 2026-03-28 |
-| 2. Sections Principales | 0/4 | Ready to execute | - |
+| 2. Sections Principales | 2/4 | In Progress|  |
 | 3. Interactivité & Conversion | 0/? | Not started | - |
 | 4. SEO & Performance | 0/? | Not started | - |
 

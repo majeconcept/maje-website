@@ -38,10 +38,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Portfolio / Réalisations
 
-- [ ] **PORT-01**: Une grille masonry ou layout asymétrique affiche minimum 6 projets fictifs crédibles avec titre, description et secteur
-- [ ] **PORT-02**: Les hover effects sont riches : zoom, overlay avec détails du projet
-- [ ] **PORT-03**: Des filtres par catégorie permettent de trier les projets avec animation fluide (GSAP Flip)
-- [ ] **PORT-04**: Une lightbox immersive s'ouvre pour chaque projet avec navigation entre projets
+- [x] **PORT-01**: Une grille masonry ou layout asymétrique affiche minimum 6 projets fictifs crédibles avec titre, description et secteur
+- [x] **PORT-02**: Les hover effects sont riches : zoom, overlay avec détails du projet
+- [x] **PORT-03**: Des filtres par catégorie permettent de trier les projets avec animation fluide (GSAP Flip)
+- [x] **PORT-04**: Une lightbox immersive s'ouvre pour chaque projet avec navigation entre projets
 
 ### Expertises
 
@@ -85,7 +85,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Animations & Polish
 
-- [ ] **ANIM-01**: Toutes les sections ont des scroll-triggered animations GSAP ScrollTrigger
+- [x] **ANIM-01**: Toutes les sections ont des scroll-triggered animations GSAP ScrollTrigger
 - [x] **ANIM-02**: Des micro-interactions sont présentes sur tous les éléments interactifs (hover, focus, active)
 - [ ] **ANIM-03**: Les images sont optimisées via `next/image` avec lazy loading (sauf hero : `priority`)
 - [ ] **ANIM-04**: Le code splitting est automatique avec dynamic imports pour les composants lourds
@@ -145,10 +145,10 @@ Deferred to future release.
 | HERO-02 | Phase 2 | Complete |
 | HERO-03 | Phase 2 | Complete |
 | HERO-04 | Phase 2 | Complete |
-| PORT-01 | Phase 2 | Pending |
-| PORT-02 | Phase 2 | Pending |
-| PORT-03 | Phase 2 | Pending |
-| PORT-04 | Phase 2 | Pending |
+| PORT-01 | Phase 2 | Complete |
+| PORT-02 | Phase 2 | Complete |
+| PORT-03 | Phase 2 | Complete |
+| PORT-04 | Phase 2 | Complete |
 | EXPT-01 | Phase 2 | Pending |
 | EXPT-02 | Phase 2 | Pending |
 | EXPT-03 | Phase 2 | Pending |
@@ -171,7 +171,7 @@ Deferred to future release.
 | SEO-03 | Phase 4 | Pending |
 | SEO-04 | Phase 4 | Pending |
 | SEO-05 | Phase 4 | Pending |
-| ANIM-01 | Phase 2 | Pending |
+| ANIM-01 | Phase 2 | Complete |
 | ANIM-02 | Phase 2 | Complete |
 | ANIM-03 | Phase 4 | Pending |
 | ANIM-04 | Phase 4 | Pending |
