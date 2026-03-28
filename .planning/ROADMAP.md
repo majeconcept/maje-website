@@ -48,7 +48,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 - [x] 02-01-PLAN.md — Section Hero : SplitText ligne par ligne + parallax scroll+souris (3 couches) + 2 CTAs MagneticButton
 - [x] 02-02-PLAN.md — Section Portfolio : grille masonry 8 projets + filtres GSAP Flip + hover overlay + lightbox AnimatePresence
-- [ ] 02-03-PLAN.md — Section Expertises : AnimatedCounter KPI (proxy GSAP) + 5 domaines icônes SVG + ScrollTrigger entrance
+- [x] 02-03-PLAN.md — Section Expertises : AnimatedCounter KPI (proxy GSAP) + 5 domaines icônes SVG + ScrollTrigger entrance
 - [ ] 02-04-PLAN.md — Section Social Proof : carrousel logos CSS marquee + 3 témoignages bento + câblage final page.tsx
 **UI hint**: yes
 

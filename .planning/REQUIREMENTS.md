@@ -45,9 +45,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Expertises
 
-- [ ] **EXPT-01**: Les domaines de compétences sont présentés avec icônes SVG custom et descriptions
-- [ ] **EXPT-02**: Les éléments apparaissent avec animations scroll-triggered via GSAP ScrollTrigger
-- [ ] **EXPT-03**: Des compteurs animés affichent les KPIs clés (années d'expérience, projets livrés, clients, pays) avec count-up à l'intersection
+- [x] **EXPT-01**: Les domaines de compétences sont présentés avec icônes SVG custom et descriptions
+- [x] **EXPT-02**: Les éléments apparaissent avec animations scroll-triggered via GSAP ScrollTrigger
+- [x] **EXPT-03**: Des compteurs animés affichent les KPIs clés (années d'expérience, projets livrés, clients, pays) avec count-up à l'intersection
 
 ### Preuves Sociales
 
@@ -149,9 +149,9 @@ Deferred to future release.
 | PORT-02 | Phase 2 | Complete |
 | PORT-03 | Phase 2 | Complete |
 | PORT-04 | Phase 2 | Complete |
-| EXPT-01 | Phase 2 | Pending |
-| EXPT-02 | Phase 2 | Pending |
-| EXPT-03 | Phase 2 | Pending |
+| EXPT-01 | Phase 2 | Complete |
+| EXPT-02 | Phase 2 | Complete |
+| EXPT-03 | Phase 2 | Complete |
 | SOCL-01 | Phase 2 | Pending |
 | SOCL-02 | Phase 2 | Pending |
 | SOCL-03 | Phase 2 | Pending |
