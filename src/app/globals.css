@@ -104,3 +104,17 @@ html {
 .logo-marquee {
   animation: marquee 25s linear infinite;
 }
+
+/* ── Touch/mobile: hide custom cursor elements before JS loads ── */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-follower,
+  .cursor-spotlight {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+}
