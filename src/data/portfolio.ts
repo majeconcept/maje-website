@@ -42,18 +42,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     rowSpan: "row-span-1",
   },
   {
-    id: "p03",
-    title: "Covering véhicule Alsace Fluid Technic",
-    client: "Alsace Fluid Technic",
-    category: "Transfert",
-    description: "Total covering d'un utilitaire aux couleurs de l'entreprise. Design graphique vert vif avec typographie impactante, visible à 100 mètres.",
-    tags: ["Covering", "Véhicule", "Identité visuelle"],
-    image: "/images/portfolio/alsace-fluid-van.webp",
-    color: "linear-gradient(135deg, oklch(0.55 0.15 140) 0%, oklch(0.35 0.10 150) 100%)",
-    colSpan: "col-span-5",
-    rowSpan: "row-span-1",
-  },
-  {
     id: "p04",
     title: "Sweats brodés Hugo Rénovation & Paysage",
     client: "Hugo Rénovation & Paysage",
