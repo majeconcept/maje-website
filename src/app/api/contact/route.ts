@@ -4,7 +4,10 @@ import { contactFormSchema } from "@/lib/validations";
 import { NotificationEmail } from "@/components/emails/NotificationEmail";
 import { ConfirmationEmail } from "@/components/emails/ConfirmationEmail";
 
-// In-memory rate limiting — resets on process restart (acceptable for low-volume v1)
+export const runtime = "edge";
+
+// In-memory rate limiting — each Edge Worker instance is isolated, so this
+// provides best-effort protection within a single instance (no setInterval needed)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour
@@ -20,14 +23,6 @@ function checkRateLimit(ip: string): boolean {
   record.count++;
   return true;
 }
-
-// Periodic cleanup — prevents unbounded Map growth
-setInterval(() => {
-  const now = Date.now();
-  for (const [key, record] of rateLimitMap) {
-    if (now > record.resetAt) rateLimitMap.delete(key);
-  }
-}, 60 * 60 * 1000);
 
 export async function POST(request: NextRequest) {
   // 1. Rate limiting by IP
