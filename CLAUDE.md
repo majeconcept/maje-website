@@ -26,7 +26,7 @@ Site vitrine pour Maje Concept, spécialiste du print et marquage textile en Als
 | Resend | 6.x | Envoi email API route — instancier DANS le handler, pas au niveau module |
 | react-email | 5.x | Templates email React |
 
-**Fonts custom :** `TestSohneBreit-Buch.otf` et `TestSohneBreit-Dreiviertelfett.otf` — chargées via `next/font/local`.
+**Fonts custom :** Polly (Thin/Light/Regular/Bold) en `.woff2` — chargées via `next/font/local`.
 
 ---
 
@@ -82,7 +82,7 @@ src/
 - **Resend :** Instancier `new Resend(process.env.RESEND_API_KEY)` **dans** le handler POST, pas au niveau module (erreur de build sinon)
 - **Tailwind :** Config CSS-first (pas de `tailwind.config.js`) — variables dans `globals.css`
 - **Images :** `next/image` obligatoire
-- **Fonts :** `next/font/local` — jamais de `<link>` Google Fonts
+- **Fonts :** `next/font/local` avec Polly (variable `--font-polly`) — jamais de `<link>` Google Fonts
 
 ---
 

@@ -53,10 +53,10 @@ export const EXPERTISE_DOMAINS: ExpertiseDomain[] = [
 
 export const KPI_STATS: KpiStat[] = [
   {
-    target: 12,
+    target: 7,
     suffix: " ans",
     label: "D'expérience",
-    description: "Fondée en 2013, Maje Concept maîtrise toutes les techniques du marquage textile.",
+    description: "Fondée en 2019, Maje Concept maîtrise toutes les techniques du marquage textile.",
   },
   {
     target: 2000,
