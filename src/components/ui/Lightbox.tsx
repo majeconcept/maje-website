@@ -2,6 +2,7 @@
 
 import { useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import Image from "next/image"
 import type { PortfolioProject } from "@/data/portfolio"
 
 interface LightboxProps {
@@ -64,14 +65,22 @@ export function Lightbox({ projects, currentIndex, onClose, onNavigate }: Lightb
             className="relative max-w-5xl w-full mx-6 lg:mx-12"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Project visual placeholder */}
+            {/* Project visual */}
             <div
               className="w-full aspect-[16/9] rounded-sm overflow-hidden relative"
               style={{ background: projects[currentIndex].color }}
             >
+              <Image
+                src={projects[currentIndex].image}
+                alt={projects[currentIndex].title}
+                fill
+                sizes="(max-width: 1200px) 90vw, 1100px"
+                className="object-cover"
+                priority
+              />
               {/* Category label overlay */}
               <div className="absolute top-6 left-6">
-                <span className="font-body text-xs tracking-[0.2em] uppercase text-brand-cream/70 border border-brand-cream/20 px-3 py-1">
+                <span className="font-body text-xs tracking-[0.2em] uppercase text-brand-cream/70 border border-brand-cream/20 px-3 py-1 bg-brand-black/40 backdrop-blur-sm">
                   {projects[currentIndex].category}
                 </span>
               </div>

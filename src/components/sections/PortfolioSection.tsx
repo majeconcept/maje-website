@@ -9,6 +9,7 @@ import { useCursor } from "@/components/providers/CursorProvider"
 import { Lightbox } from "@/components/ui/Lightbox"
 import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, type PortfolioFilter } from "@/data/portfolio"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export function PortfolioSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -186,9 +187,13 @@ export function PortfolioSection() {
                     if (e.key === "Enter" || e.key === " ") handleCardClick(project.id)
                   }}
                 >
-                  {/* Background gradient */}
-                  <div
-                    className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105"
+                  {/* Background image */}
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     style={{ background: project.color }}
                   />
 
