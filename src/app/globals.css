@@ -13,9 +13,9 @@
   --color-brand-muted:      oklch(0.45 0.010 250);
 
   /* ─── Typography ─── */
-  /* --font-sohne-breit is injected by next/font/local in layout.tsx */
-  --font-display: var(--font-sohne-breit, system-ui, sans-serif);
-  --font-body:    var(--font-sohne-breit, system-ui, sans-serif);
+  /* --font-polly is injected by next/font/local in layout.tsx */
+  --font-display: var(--font-polly, system-ui, sans-serif);
+  --font-body:    var(--font-polly, system-ui, sans-serif);
 
   /* ─── Custom Easing — used in GSAP (as strings) and CSS transitions ─── */
   --ease-out-expo:     cubic-bezier(0.16, 1, 0.3, 1);

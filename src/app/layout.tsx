@@ -7,20 +7,30 @@ import { AnimationProvider } from "@/components/providers/AnimationProvider";
 import { CustomCursor } from "@/components/cursor/CustomCursor";
 import { Navigation } from "@/components/navigation/Navigation";
 
-const sohneBreit = localFont({
+const polly = localFont({
   src: [
     {
-      path: "../../public/fonts/TestSohneBreit-Buch.otf",
+      path: "../../public/fonts/Polly-Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Polly-light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Polly-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/TestSohneBreit-Dreiviertelfett.otf",
+      path: "../../public/fonts/Polly-Bold.woff2",
       weight: "700",
       style: "normal",
     },
   ],
-  variable: "--font-sohne-breit",
+  variable: "--font-polly",
   display: "swap",
   preload: true,
   adjustFontFallback: "Arial",
@@ -36,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | Maje Concept",
   },
   description:
-    "Spécialiste du print et marquage textile en Alsace depuis plus de 15 ans. Sérigraphie, broderie, DTF, flocage — pour entreprises, institutionnels et associations. Devis gratuit.",
+    "Spécialiste du print et marquage textile en Alsace depuis 2019. Sérigraphie, broderie, DTF, flocage — pour entreprises, institutionnels et associations. Devis gratuit.",
 
   keywords: [
     "marquage textile",
@@ -152,7 +162,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={sohneBreit.variable}>
+    <html lang="fr" className={polly.variable}>
       <body className="bg-brand-black text-brand-cream font-display antialiased">
         <script
           type="application/ld+json"

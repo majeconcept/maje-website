@@ -119,7 +119,7 @@ export function ExpertiseSection() {
               de votre image.
             </h2>
             <p className="font-body text-brand-muted text-sm leading-relaxed max-w-sm lg:text-right">
-              Depuis 2013, Maje Concept réunit sous un même toit les cinq techniques majeures du marquage textile — pour un interlocuteur unique, quelle que soit la complexité de votre projet.
+              Depuis 2019, Maje Concept réunit sous un même toit les cinq techniques majeures du marquage textile — pour un interlocuteur unique, quelle que soit la complexité de votre projet.
             </p>
           </div>
         </div>

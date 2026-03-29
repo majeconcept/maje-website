@@ -118,7 +118,7 @@ export function Footer() {
             </p>
             <p className="font-body text-brand-muted text-sm leading-relaxed mb-6">
               Spécialiste alsacien du marquage textile et de l&apos;impression sur mesure
-              depuis plus de 15 ans. Sérigraphie, broderie, DTF, flocage.
+              depuis 2019. Sérigraphie, broderie, DTF, flocage.
             </p>
             {/* Social links */}
             <div className="flex gap-3">
